@@ -13,7 +13,7 @@
 
             var fileData=reader.result;
             var workbook=XLSX.read(fileData,{type:'binary'});
-            workbook.SheetNames.forEach(function(sheetName){
+            workbook.SheetNames.forEach(function(SheetName){
 
                 var rowObject =XLSX.utils.sheet_to_row_object_array(workbook.Sheets[SheetName]);
                 excelJsonObj=rowObject;
@@ -22,7 +22,7 @@
             for(var i=0;i<excelJsonObj.length;i++)
             {
                 var data=excelJsonObj[i];
-                $('#myTable tbody:last-child').append("<tr><td>"+data.Donor+"</td><td>"+data.Personalization+"</td><td>"+Zone+"</td><tr>");
+                $('#myTable tbody:last-child').append("<tr><td>"+data.Donor+"</td><td>"+data.Personalization+"</td><td>"+data.Zone+"</td><tr>");
             }
         };
         reader.readAsBinaryString(input.files[0]);
