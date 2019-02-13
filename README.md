@@ -6,7 +6,7 @@ https://wendycorene.github.io/bricks/
 ### Group members
 Priyanka Bonam - Documentation Manager  
 Wendy Eloe - Repo Manager  
-Durga Prasad Kallem - Code Manager  
+Durga Prasad Kallem  
 Subodh Lakhinana - Code Manager  
 Bhavika Padidala - Scrum Manager  
-Sachin Setty - Code Manager
+Sachin Setty  
