@@ -27,10 +27,10 @@ req.onload = function(e) {
   var workbook = XLSX.read(data, {type:"array"});
 
   var htmlstr = XLSX.write(workbook,{sheet:"Bricks", type:'binary',bookType:'html'});
-                        $('#wrapper')[0].innerHTML += htmlstr;
+  $('#wrapper')[0].innerHTML += htmlstr;
 
   var htmlstr2 = XLSX.write(workbook,{sheet:"Pavers", type:'binary',bookType:'html'});
-                        $('#wrapper')[0].innerHTML += htmlstr2;
+  $('#wrapper')[0].innerHTML += htmlstr2;
 }
 
 req.send();
