@@ -15,7 +15,7 @@
 
 <script>
 $(document).ready(function(){
-var url = "https://wendycorene.github.io/bricks/bricksSampleData.xlsx";
+var url = "https://wendycorene.github.io/bricks/MultiSheetBrickData.xlsx";
 
 /* set up async GET request */
 var req = new XMLHttpRequest();
@@ -26,8 +26,11 @@ req.onload = function(e) {
   var data = new Uint8Array(req.response);
   var workbook = XLSX.read(data, {type:"array"});
 
-  var htmlstr = XLSX.write(workbook,{sheet:"fixed", type:'binary',bookType:'html'});
+  var htmlstr = XLSX.write(workbook,{sheet:"Bricks", type:'binary',bookType:'html'});
                         $('#wrapper')[0].innerHTML += htmlstr;
+
+  var htmlstr2 = XLSX.write(workbook,{sheet:"Pavers", type:'binary',bookType:'html'});
+                        $('#wrapper')[0].innerHTML += htmlstr2;
 }
 
 req.send();
