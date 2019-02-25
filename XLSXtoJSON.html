@@ -28,12 +28,43 @@ req.onload = function(e) {
 
   var first_sheet_name = workbook.SheetNames[0];
   var bricks = workbook.Sheets[first_sheet_name];
+  var bricksJSON = XLSX.utils.sheet_to_json(bricks,{raw:true});
   console.log(XLSX.utils.sheet_to_json(bricks,{raw:true}));
 
   var second_sheet_name = workbook.SheetNames[1];
   var pavers = workbook.Sheets[second_sheet_name];
+  var paversJSON = XLSX.utils.sheet_to_json(pavers,{raw:true});
   console.log(XLSX.utils.sheet_to_json(pavers,{raw:true}));
+
+  var toCheck;
+
+  var nameChecked = "ann";
+
+  for (x in bricksJSON)
+  {
+    toCheck = bricksJSON[x].DonorName.toLowerCase();
+    if (toCheck.includes(nameChecked)){
+      $('#wrapper')[0].innerHTML += JSON.stringify(bricksJSON[x].DonorName)
+      + "<br>" + JSON.stringify(bricksJSON[x].Line1) + "<br>"
+      + JSON.stringify(bricksJSON[x].Line2) + "<br>"
+      + JSON.stringify(bricksJSON[x].Line3) + "<br><br>";
+    }
   }
+  for (x in paversJSON)
+  {
+    toCheck = paversJSON[x].DonorName.toLowerCase();
+    if (toCheck.includes(nameChecked)){
+      $('#wrapper')[0].innerHTML += JSON.stringify(paversJSON[x].DonorName)
+      + "<br>" + JSON.stringify(paversJSON[x].Line1) + "<br>"
+      + JSON.stringify(paversJSON[x].Line2) + "<br>"
+      + JSON.stringify(paversJSON[x].Line3) + "<br>"
+      + JSON.stringify(paversJSON[x].Line4) + "<br>"
+      + JSON.stringify(paversJSON[x].Line5) + "<br>"
+      + JSON.stringify(paversJSON[x].Line6) + "<br><br>";
+    }
+  }
+}
   req.send();
+
 })
 </script>
