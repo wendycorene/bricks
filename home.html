@@ -1,54 +1,52 @@
 <html ng-app='myapp'>
     <head>
+            <meta name ="viewport" content = "width = device-width, initial-scale= 1">
             <meta charset="utf-8">
             <meta name="description" content="">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
             <title>Find your Brick</title>
             <!--<body style="background-color:#243e16;"></body>-->
-            <style type="text/css">
-               .bg-img {
-    /* The image used */
-    background-image: url("5b918b83a56ee.image.jpg");
-  
-    /* Control the height of the image */
-    min-height: 1500px;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-   /*opacity: 0.5;-->*/
-  }
-                </style>
-            </head>
-            <body>
-                    <div class="bg-img">
-                            <form action="/action_page.php" class="container">
-                                <h1>Enter your Name and Inscription to find the Brick</h1>
-                          <tr>
-                              <td>
-                                  Name: 
-                              </td>
-                              <td>
-                                  <input type= "text" placeholder="Enter Name" name="">
-                              </td>
-                          </tr>
-                        </br>
-                          <tr>
-                                <td>
-                                   Inscription: 
-                                </td>
-                                <td>
-                                    <input type= "inscription" placeholder="Enter Inscription" name="">
-                                </td>
-                            </tr>
-                        </br>
-                              <button type="submit" class="btn">Search</button>
-                            </form>
-                          </div>
+
+            <style>
+                body  {
+                  background-image: url("5b918b83a56ee.image.jpg");
+                  height: 100%;
                 
+                  background-color: #cccccc;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  
+                }
+                </style>
+                
+                </head>
+                <body>
+                
+                <h1>  Find your brick here!!</h1>
+                
+                <tr>
+                  <td>
+                      Name  :  
+                  </td>
+                  <td>
+                      <input type= "text" placeholder= "Enter Name" name="">
+                  </td>
+                </tr>
+                </br>
+                <tr>
+                    <td>
+                       Inscription: 
+                    </td>
+                    <td>
+                        <input type= "inscription" placeholder="Enter Inscription" name="">
+                    </td>
+                </tr>
+                </br>
+                  <button type="submit" class="btn">Search</button>
+                </form>
+                
+                    
             </body>
 </html>
