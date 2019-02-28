@@ -4,19 +4,19 @@ function populateResults() {
   var val = document.getElementById("search").value;
   console.log(val);
   if(val != ""){
-    var bcounter = 1;
+    var counter = 1;
     var pcounter=1;
   for (var x in bricksJSON)
     {
       var toCheck = bricksJSON[x].DonorName.toLowerCase();      
       if (toCheck.includes(val)){
       var node = document.createElement("p");  
-      var textnode = document.createTextNode(bcounter+ ") " + toCheck);
+      var textnode = document.createTextNode(counter+ ") " + toCheck);
       node.appendChild(textnode);                             
       document.getElementById("results").appendChild(node);      
-      bcounter++; 
+      counter++; 
       }
-      var brickscount=bcounter;
+      var brickscount=counter;
      
     }
     for (x in paversJSON)
@@ -25,14 +25,16 @@ function populateResults() {
         if (toCheck.includes(val))
         {
         var node = document.createElement("p");  
-        var textnode = document.createTextNode(pcounter+ ") " + toCheck);
+        var textnode = document.createTextNode(brickscount+ ") " + toCheck);
         node.appendChild(textnode);                             
         document.getElementById("results").appendChild(node);      
-        pcounter++; 
+        brickscount++; 
       }
     
     }
-    // var paverscounter=bcounter+brickscount;
-    // var count = document.createTextNode("Total "+paverscounter+" results found"+brickscount+" "+pcounter);
-    // document.getElementById("results").appendChild(count);   
+     var paverscounter=brickscount-1;
+     var x = document.createElement("H1");
+    var count = document.createTextNode("Total "+paverscounter+" results found for word  "+val);
+    x.appendChild(count);
+    document.getElementById("results").appendChild(x);   
   } }
