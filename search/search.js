@@ -10,13 +10,27 @@ function populateResults() {
     {
       var toCheck = bricksJSON[x].DonorName.toLowerCase();      
       if (toCheck.includes(val)){
+  
       var node = document.createElement("p");  
       var textnode = document.createTextNode(counter+ ") " + toCheck);
       node.appendChild(textnode);                             
       document.getElementById("results").appendChild(node);      
       counter++; 
       }
-      var brickscount=counter;
+      var brickscount1=counter;
+    }
+      for (var x in bricksJSON)
+    {
+
+      var descriptioncheck = bricksJSON[x].Personalization.toLowerCase();      
+      if (descriptioncheck.includes(val)){
+      var node = document.createElement("p");  
+      var textnode = document.createTextNode(brickscount1+ ") " + descriptioncheck);
+      node.appendChild(textnode);                             
+      document.getElementById("results").appendChild(node);      
+      brickscount1++; 
+      }
+      var paverscount=brickscount1;
      
     }
     for (x in paversJSON)
@@ -25,14 +39,28 @@ function populateResults() {
         if (toCheck.includes(val))
         {
         var node = document.createElement("p");  
-        var textnode = document.createTextNode(brickscount+ ") " + toCheck);
+        var textnode = document.createTextNode(paverscount+ ") " + toCheck);
         node.appendChild(textnode);                             
         document.getElementById("results").appendChild(node);      
-        brickscount++; 
+        paverscount++; 
+      }
+      var Personalizationpaverscount=paverscount;
+    
+    }
+    for (x in paversJSON)
+    {
+        var PersonalizationCheck = paversJSON[x].Personalization.toLowerCase();
+        if (PersonalizationCheck.includes(val))
+        {
+        var node = document.createElement("p");  
+        var textnode = document.createTextNode(Personalizationpaverscount+ ") " + PersonalizationCheck);
+        node.appendChild(textnode);                             
+        document.getElementById("results").appendChild(node);      
+        Personalizationpaverscount++; 
       }
     
     }
-     var paverscounter=brickscount-1;
+     var paverscounter=Personalizationpaverscount-1;
      var x = document.createElement("H1");
     var count = document.createTextNode("Total "+paverscounter+" results found for word  "+val);
     x.appendChild(count);
