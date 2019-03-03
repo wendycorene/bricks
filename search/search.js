@@ -1,31 +1,33 @@
 
 function populateResults() {
     document.getElementById("results").innerHTML = "";
-  var val = document.getElementById("search").value;
-  console.log(val);
+  var val = document.getElementById("search").value.toLowerCase();
+  // console.log(val);
   if(val != ""){
     var counter = 1;
-    var pcounter=1;
+   
   for (var x in bricksJSON)
     {
-      var toCheck = bricksJSON[x].DonorName.toLowerCase();      
-      if (toCheck.includes(val)){
+      var toCheck = bricksJSON[x].DonorName.toLowerCase(); 
+        if (toCheck.includes(val))
+      {
   
       var node = document.createElement("p");  
-      var textnode = document.createTextNode(counter+ ") " + toCheck);
+      var textnode = document.createTextNode(counter+ ") " + toCheck+ "  "+ bricksJSON[x].Zone);
       node.appendChild(textnode);                             
       document.getElementById("results").appendChild(node);      
       counter++; 
       }
+     
       var brickscount1=counter;
     }
       for (var x in bricksJSON)
     {
 
-      var descriptioncheck = bricksJSON[x].Personalization.toLowerCase();      
+      var descriptioncheck = bricksJSON[x].Personalization.toLowerCase();         
       if (descriptioncheck.includes(val)){
       var node = document.createElement("p");  
-      var textnode = document.createTextNode(brickscount1+ ") " + descriptioncheck);
+      var textnode = document.createTextNode(brickscount1+ ") " + descriptioncheck+" "+bricksJSON[x].Zone);
       node.appendChild(textnode);                             
       document.getElementById("results").appendChild(node);      
       brickscount1++; 
@@ -39,7 +41,7 @@ function populateResults() {
         if (toCheck.includes(val))
         {
         var node = document.createElement("p");  
-        var textnode = document.createTextNode(paverscount+ ") " + toCheck);
+        var textnode = document.createTextNode(paverscount+ ") " + toCheck+" "+paversJSON[x].Zone);
         node.appendChild(textnode);                             
         document.getElementById("results").appendChild(node);      
         paverscount++; 
@@ -53,7 +55,7 @@ function populateResults() {
         if (PersonalizationCheck.includes(val))
         {
         var node = document.createElement("p");  
-        var textnode = document.createTextNode(Personalizationpaverscount+ ") " + PersonalizationCheck);
+        var textnode = document.createTextNode(Personalizationpaverscount+ ") " + PersonalizationCheck+paversJSON[x].Zone);
         node.appendChild(textnode);                             
         document.getElementById("results").appendChild(node);      
         Personalizationpaverscount++; 
