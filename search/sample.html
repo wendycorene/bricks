@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head><!--www.techstrikers.com-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<meta charset="utf-8">
+<title>Search</title>
+<body>
+<p>Enter Donor name or description</p>
+<form onreset="clearForm(form)">
+<input name="search" id="search" type="text"  onfocusOut="populateResults()">
+<button type="button" value="submit" > search </button>
+<input type="reset">
+  </form>
+  <script>
+
+    function clearForm(form) {
+        document.body.innerHTML = "";
+        var $f = $(form);
+        var $f = $f.find(':input').not(':button, :submit, :reset, :hidden');
+        $f.val('').attr('value','').removeAttr('checked').removeAttr('selected');
+    }
+
+
+var app=angular.module('app',[]);
+app.controller("appController",function($scope){
+
+$scope.employees= [bricksJSON]
+});
+</script>
+</head>
+<divng-app="app">
+<divng-controller="appController">
+<table>
+<th>sl. no</th>
+<th>Donor</th>
+<th>Personalization</th>
+<th>Zone</th>
+<tr ng-repeat="emp in employees">
+<td>{{emp.DonorName}}</td>
+<td>{{emp.Personalization}}</td>
+<td>{{emp.Zone}}</td>
+</tr>
+</table>
+</div>
+</div>
+
+</body>
+</html>

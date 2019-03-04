@@ -9,15 +9,35 @@
  </head>
     <body>
         <p>Enter Donor name or description</p>
-        <input name="search" id="search" type="text"  onfocusOut="populateResults()" >
+        <form onreset="clearForm(form)">
+        <input name="search" id="search" type="text"  onfocusOut="populateResults()">
+        <button type="button" value="submit" > search </button>
+        <input type="reset">
+          </form>
+          <script>
 
+            function clearForm(form) {
+                document.body.innerHTML = "";
+                var $f = $(form);
+                var $f = $f.find(':input').not(':button, :submit, :reset, :hidden');
+                $f.val('').attr('value','').removeAttr('checked').removeAttr('selected');
+            }
+        </script>
         <div id="results" >
             <table border=1 id="mytable">
-                <td>Donor</td>
-                <td>Personalization</td>
-                <td>Zone</td>
-                <td>Brick number</td>
-            </table>
+                    <thead>
+                            <tr>
+                                <th> sl.no </th>
+                                <th> Donor name</th>
+                                <th>Personalization</th>
+                                <th>Zone</th>
+                                </tr>
+                                
+                        </thead>
+                        <tbody>
+        
+                        </tbody>
+                    </table>
 
 
         </div>
