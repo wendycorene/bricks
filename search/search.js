@@ -13,7 +13,18 @@ function populateResults() {
       {
   
       var node = document.createElement("p");  
-      var textnode = document.createTextNode(counter+ ") " + toCheck+ "  "+ bricksJSON[x].Zone);
+      var textnode = document.createTextNode(
+//         <table>
+// <th></th>
+// <th>toCheck </th>
+// <th>bricksJSON[x].Zone</th>
+// <th>bricksJSON[x].Zone</th>
+// <tr ng-repeat="emp in employees">
+// <td>{{counter+ ") "}}</td>
+// <td>{{bricksJSON[x].descriptioncheck}}</td>
+// <td>{{p.Zone}}</td>
+// </tr>
+        counter+ ") " + toCheck+ "  "+ bricksJSON[x].Zone);
       node.appendChild(textnode);                             
       document.getElementById("results").appendChild(node);      
       counter++; 
@@ -41,7 +52,10 @@ function populateResults() {
         if (toCheck.includes(val))
         {
         var node = document.createElement("p");  
-        var textnode = document.createTextNode(paverscount+ ") " + toCheck+" "+paversJSON[x].Zone);
+        var textnode = document.createTextNode(
+          
+          
+          paverscount+ ") " + toCheck+" "+paversJSON[x].Zone);
         node.appendChild(textnode);                             
         document.getElementById("results").appendChild(node);      
         paverscount++; 
