@@ -10,9 +10,9 @@
     <body>
         <p>Enter Donor name or description</p>
         <form onreset="clearForm(form)">
-        <input name="search" id="search" type="text"  onfocusOut="populateResults()">
+        <input name="search" id="search" type="text"  >
         </br>
-        <button type="button" value="submit" > search </button>
+        <button type="button" value="submit" onClick="populateResults()"> search </button>
         <input type="reset">
           </form>
           <script>

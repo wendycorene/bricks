@@ -1,6 +1,5 @@
 var bricksJSON;
 var paversJSON;
-
 $(document).ready(function(){
 var url = "https://wendycorene.github.io/bricks/MultiSheetBrickData.xlsx";
 var req = new XMLHttpRequest();
