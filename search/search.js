@@ -88,7 +88,8 @@ function populateResults() {
       var node = document.createElement("p");  
       // var textnode = document.createTextNode(brickscount1+ ") " + descriptioncheck+" "+bricksJSON[x].Zone);
       node.appendChild(table);                             
-      document.getElementById("results").appendChild(node);      
+      document.getElementById("results").appendChild(node);     
+ 
       brickscount1++; 
       }
       var paverscount=brickscount1;
@@ -161,5 +162,5 @@ function populateResults() {
      var x = document.createElement("H1");
     var count = document.createTextNode("Total "+paverscounter+" results found for word  "+val);
     x.appendChild(count);
-    document.getElementById("count").appendChild(x);   
+    document.getElementById("results").appendChild(x);   
   } }}
