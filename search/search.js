@@ -9,10 +9,10 @@ function populateResults() {
     var counter = 1;
     var table = document.createElement('table');
     var tr = document.createElement('tr');   
-    var td1 = document.createElement('td');
-    var td2 = document.createElement('td');
-    var td3 = document.createElement('td');
-    var td4 = document.createElement('td');
+    var td1 = document.createElement('th');
+    var td2 = document.createElement('th');
+    var td3 = document.createElement('th');
+    var td4 = document.createElement('th');
     var text0 = document.createTextNode('S.No');
     var text1 = document.createTextNode('Donor Name');
     var text2 = document.createTextNode( 'Personalization');
