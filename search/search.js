@@ -13,9 +13,9 @@ function populateResults() {
     var td2 = document.createElement('td');
     var td3 = document.createElement('td');
     var td4 = document.createElement('td');
-    var text0 = document.createTextNode('number');
-    var text1 = document.createTextNode('Donor name');
-    var text2 = document.createTextNode( 'personalization');
+    var text0 = document.createTextNode('S.No');
+    var text1 = document.createTextNode('Donor Name');
+    var text2 = document.createTextNode( 'Personalization');
     var text3 = document.createTextNode( 'Zone');
     td1.appendChild(text0);
     td2.appendChild(text1);
@@ -161,5 +161,5 @@ function populateResults() {
      var x = document.createElement("H1");
     var count = document.createTextNode("Total "+paverscounter+" results found for word  "+val);
     x.appendChild(count);
-    document.getElementById("results").appendChild(x);   
+    document.getElementById("count").appendChild(x);   
   } }}
