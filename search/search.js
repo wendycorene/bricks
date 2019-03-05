@@ -5,28 +5,34 @@ function populateResults() {
   // console.log(val);
   if(val != ""){
     var counter = 1;
-   
+    var table = document.createElement('table');
   for (var x in bricksJSON)
     {
       var toCheck = bricksJSON[x].DonorName.toLowerCase(); 
         if (toCheck.includes(val))
       {
-  
+    var tr = document.createElement('tr');   
+    var td1 = document.createElement('td');
+    var td2 = document.createElement('td');
+    var td3 = document.createElement('td');
+    var td4 = document.createElement('td');
+    var text1 = document.createTextNode( bricksJSON[x].DonorName);
+    var text2 = document.createTextNode( bricksJSON[x].Personalization);
+    var text3 = document.createTextNode( bricksJSON[x].Zone);
+    var text0 = document.createTextNode( counter);
+    td1.appendChild(text0);
+    td2.appendChild(text1);
+    td3.appendChild(text2);
+    td4.appendChild(text3);
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    tr.appendChild(td4);
+    table.appendChild(tr);
       var node = document.createElement("p");  
-      var textnode = document.createTextNode(
-//         <table>
-// <th></th>
-// <th>toCheck </th>
-// <th>bricksJSON[x].Zone</th>
-// <th>bricksJSON[x].Zone</th>
-// <tr ng-repeat="emp in employees">
-// <td>{{counter+ ") "}}</td>
-// <td>{{bricksJSON[x].descriptioncheck}}</td>
-// <td>{{p.Zone}}</td>
-// </tr>
-        counter+ ") " + toCheck+ "  "+ bricksJSON[x].Zone);
-      node.appendChild(textnode);                             
-      document.getElementById("results").appendChild(node);      
+      // var textnode = document.createTextNode(counter+ ") " + toCheck+ "  "+ bricksJSON[x].Zone);
+      node.appendChild(table);             
+      document.getElementById("results").appendChild(node); 
       counter++; 
       }
      
@@ -37,9 +43,27 @@ function populateResults() {
 
       var descriptioncheck = bricksJSON[x].Personalization.toLowerCase();         
       if (descriptioncheck.includes(val)){
+        var tr = document.createElement('tr');   
+        var td1 = document.createElement('td');
+        var td2 = document.createElement('td');
+        var td3 = document.createElement('td');
+        var td4 = document.createElement('td');
+        var text0 = document.createTextNode( brickscount1);
+        var text1 = document.createTextNode( bricksJSON[x].DonorName);
+        var text2 = document.createTextNode( bricksJSON[x].Personalization);
+        var text3 = document.createTextNode( bricksJSON[x].Zone);
+        td1.appendChild(text0);
+        td2.appendChild(text1);
+        td3.appendChild(text2);
+        td4.appendChild(text3);
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+        table.appendChild(tr);
       var node = document.createElement("p");  
-      var textnode = document.createTextNode(brickscount1+ ") " + descriptioncheck+" "+bricksJSON[x].Zone);
-      node.appendChild(textnode);                             
+      // var textnode = document.createTextNode(brickscount1+ ") " + descriptioncheck+" "+bricksJSON[x].Zone);
+      node.appendChild(table);                             
       document.getElementById("results").appendChild(node);      
       brickscount1++; 
       }
@@ -51,12 +75,27 @@ function populateResults() {
         var toCheck = paversJSON[x].DonorName.toLowerCase();
         if (toCheck.includes(val))
         {
+          var tr = document.createElement('tr');   
+          var td1 = document.createElement('td');
+          var td2 = document.createElement('td');
+          var td3 = document.createElement('td');
+          var td4 = document.createElement('td');
+          var text0 = document.createTextNode( paverscount);
+          var text1 = document.createTextNode( paversJSON[x].DonorName);
+          var text2 = document.createTextNode( paversJSON[x].Personalization);
+          var text3 = document.createTextNode( paversJSON[x].Zone);
+          td1.appendChild(text0);
+          td2.appendChild(text1);
+          td3.appendChild(text2);
+          td4.appendChild(text3);
+          tr.appendChild(td1);
+          tr.appendChild(td2);
+          tr.appendChild(td3);
+          tr.appendChild(td4);
+          table.appendChild(tr);
         var node = document.createElement("p");  
-        var textnode = document.createTextNode(
-          
-          
-          paverscount+ ") " + toCheck+" "+paversJSON[x].Zone);
-        node.appendChild(textnode);                             
+        // var textnode = document.createTextNode(paverscount+ ") " + toCheck+" "+paversJSON[x].Zone);
+        node.appendChild(table);                             
         document.getElementById("results").appendChild(node);      
         paverscount++; 
       }
@@ -68,9 +107,27 @@ function populateResults() {
         var PersonalizationCheck = paversJSON[x].Personalization.toLowerCase();
         if (PersonalizationCheck.includes(val))
         {
+          var tr = document.createElement('tr');   
+          var td1 = document.createElement('td');
+          var td2 = document.createElement('td');
+          var td3 = document.createElement('td');
+          var td4 = document.createElement('td');
+          var text0 = document.createTextNode( Personalizationpaverscount);
+          var text1 = document.createTextNode( paversJSON[x].DonorName);
+          var text2 = document.createTextNode( paversJSON[x].Personalization);
+          var text3 = document.createTextNode( paversJSON[x].Zone);
+          td1.appendChild(text0);
+          td2.appendChild(text1);
+          td3.appendChild(text2);
+          td4.appendChild(text3);
+          tr.appendChild(td1);
+          tr.appendChild(td2);
+          tr.appendChild(td3);
+          tr.appendChild(td4);
+          table.appendChild(tr);
         var node = document.createElement("p");  
-        var textnode = document.createTextNode(Personalizationpaverscount+ ") " + PersonalizationCheck+paversJSON[x].Zone);
-        node.appendChild(textnode);                             
+        // var textnode = document.createTextNode(Personalizationpaverscount+ ") " + PersonalizationCheck+paversJSON[x].Zone);
+        node.appendChild(table);                             
         document.getElementById("results").appendChild(node);      
         Personalizationpaverscount++; 
       }
