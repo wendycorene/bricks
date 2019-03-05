@@ -2,7 +2,9 @@
 function populateResults() {
     document.getElementById("results").innerHTML = "";
   var val = document.getElementById("search").value.toLowerCase();
-  // console.log(val);
+  var res=val.slice(-1);
+  if(res!=0)
+  {
   if(val != ""){
     var counter = 1;
     var table = document.createElement('table');
@@ -160,4 +162,4 @@ function populateResults() {
     var count = document.createTextNode("Total "+paverscounter+" results found for word  "+val);
     x.appendChild(count);
     document.getElementById("results").appendChild(x);   
-  } }
+  } }}
