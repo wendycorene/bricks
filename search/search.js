@@ -6,6 +6,28 @@ function populateResults() {
   if(val != ""){
     var counter = 1;
     var table = document.createElement('table');
+    var tr = document.createElement('tr');   
+    var td1 = document.createElement('td');
+    var td2 = document.createElement('td');
+    var td3 = document.createElement('td');
+    var td4 = document.createElement('td');
+    var text0 = document.createTextNode('number');
+    var text1 = document.createTextNode('Donor name');
+    var text2 = document.createTextNode( 'personalization');
+    var text3 = document.createTextNode( 'Zone');
+    td1.appendChild(text0);
+    td2.appendChild(text1);
+    td3.appendChild(text2);
+    td4.appendChild(text3);
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    tr.appendChild(td4);
+    table.appendChild(tr);
+      var node = document.createElement("p");  
+      node.appendChild(table);             
+      document.getElementById("results").appendChild(node); 
+
   for (var x in bricksJSON)
     {
       var toCheck = bricksJSON[x].DonorName.toLowerCase(); 
