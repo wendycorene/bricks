@@ -9,13 +9,13 @@ function populateResults() {
     var counter = 1;
     var table = document.createElement('table');
     var tr = document.createElement('tr');   
-    var td1 = document.createElement('td');
-    var td2 = document.createElement('td');
-    var td3 = document.createElement('td');
-    var td4 = document.createElement('td');
-    var text0 = document.createTextNode('number');
-    var text1 = document.createTextNode('Donor name');
-    var text2 = document.createTextNode( 'personalization');
+    var td1 = document.createElement('th');
+    var td2 = document.createElement('th');
+    var td3 = document.createElement('th');
+    var td4 = document.createElement('th');
+    var text0 = document.createTextNode('S.No');
+    var text1 = document.createTextNode('Donor Name');
+    var text2 = document.createTextNode( 'Personalization');
     var text3 = document.createTextNode( 'Zone');
     td1.appendChild(text0);
     td2.appendChild(text1);
@@ -88,7 +88,8 @@ function populateResults() {
       var node = document.createElement("p");  
       // var textnode = document.createTextNode(brickscount1+ ") " + descriptioncheck+" "+bricksJSON[x].Zone);
       node.appendChild(table);                             
-      document.getElementById("results").appendChild(node);      
+      document.getElementById("results").appendChild(node);     
+ 
       brickscount1++; 
       }
       var paverscount=brickscount1;

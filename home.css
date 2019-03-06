@@ -1,0 +1,33 @@
+<<<<<<< HEAD
+
+body{
+
+    background-image: url("5b918b83a56ee.image.jpg");
+    height: 100%;
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;         
+    background-position: center center;
+    background-attachment: fixed;
+}
+               
+=======
+body  {
+  background-image: url("5b918b83a56ee.image.jpg");
+  height: 100%;
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#inscriptionform {
+  width: 1000px;
+  padding: 25px;
+  margin-left:100px;
+  margin-right: 100px;
+  text-align: center;
+  box-align: center;
+  float: center;
+}
+
+>>>>>>> c78edfb1b3c68d9972ac6a3f8b65a7e99b7d7136
