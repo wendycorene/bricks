@@ -1,22 +1,34 @@
 <html>
  <head>
   <title>Donor Search</title>
+  <style>
+    table {
+        border-collapse: collapse;
+    }
+    tr,td,table{
+        border: 1px solid black;
+        padding: 10px;
 
+    }
+  </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
  <script src="xlsx.full.min.js"></script>
  <script src="data.js"></script>
  <script src="search.js"></script>
+ <link rel="stylesheet" type="text/css" href="search.css">
  </head>
     <body>
-        <p>Enter Donor name or description</p>
+        <div id="searchform">
+        <p>Enter donor name or Description : </p>
         <form onreset="clearForm(form)">
-        <input name="search" id="search" type="text"  onfocusOut="populateResults()">
+        <input name="search" id="search" type="text">
         </br>
-        <button type="button" value="submit" > search </button>
+        </br>
+        <button type="button" value="submit" onClick="populateResults()"> search </button>
         <input type="reset">
           </form>
+        </div>
           <script>
-
             function clearForm(form) {
                 document.body.innerHTML = "";
                 var $f = $(form);
@@ -25,7 +37,7 @@
             }
         </script>
         <div id="results" >
-            <table border=1 id="mytable">
+            <!-- <table border=1 id="mytable">
                     <thead>
                             <tr>
                                 <th> sl.no </th>
@@ -38,9 +50,7 @@
                         <tbody>
         
                         </tbody>
-                    </table>
-
-
+                    </table> -->
         </div>
  </body>
 </html>

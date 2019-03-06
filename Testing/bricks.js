@@ -10,7 +10,7 @@
             {
                 var data=excelJsonObj[i];
                 console.log(data)
-                document.getElementById('#myTable tbody:last-child').append("<tr><td>"+data.Donor+"</td><td>"+data.Personalization+"</td><td>"+data.Zone+"</td><tr>");
+//                document.getElementById('#myTable tbody:last-child').append("<tr><td>"+data.Donor+"</td><td>"+data.Personalization+"</td><td>"+data.Zone+"</td><tr>");
             }
 
     })();

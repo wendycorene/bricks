@@ -24,21 +24,22 @@
 var app=angular.module('app',[]);
 app.controller("appController",function($scope){
 
-$scope.employees= [bricksJSON]
+$scope.employees= [p]
+
 });
 </script>
 </head>
 <divng-app="app">
 <divng-controller="appController">
 <table>
-<th>sl. no</th>
+<th>sl.no</th>
 <th>Donor</th>
 <th>Personalization</th>
 <th>Zone</th>
 <tr ng-repeat="emp in employees">
-<td>{{emp.DonorName}}</td>
-<td>{{emp.Personalization}}</td>
-<td>{{emp.Zone}}</td>
+<td>{{p.DonorName}}</td>
+<td>{{p.Personalization}}</td>
+<td>{{p.Zone}}</td>
 </tr>
 </table>
 </div>
