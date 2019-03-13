@@ -6,13 +6,13 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
         <h1>Donors info</h1>
-        <script type="text/javascript" src="xlsx.core.min.js"></script>
+        <script type="text/javascript" src="angular.min.js"></script>
+        <script type="text/javascript" src="xlsx.full.min.js"></script>
         <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" src="bricks.js"></script>
-        <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-
+        <script type="text/javascript" src="donors.js"></script>
         <style type="text/css">
         table, th, td{
+
             border: 1px solid black;
         }
         </style>
@@ -20,8 +20,12 @@
 
 <!-- https://stackoverflow.com/questions/29465930/read-local-xls-xlsx-file-in-javascript-->
     </head>
-    <body>
+    <body ng-controller='mycontroller'>
        <div>
+           <form enctype="multipart/form-data">
+            <input type="file" id="file">
+            <button type="submit" value="submit" ng-click="uploadExcl()">upload file</button>
+        </form>
         <div>
             <table id="myTable">
                 <thead>

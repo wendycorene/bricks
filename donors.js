@@ -2,19 +2,18 @@
     var app=angular.module('myapp',[]);
     app.controller('mycontroller',['$scope',mycontroller]);
     var excelJsonObj=[];
-
     function mycontroller($scope)
     {
-        $scope.uploadExcel=function(){
+        $scope.uploadExcl=function(){
         var  myFile=document.getElementById('file');
         var input=myFile;
         var reader=new FileReader();
-        reader.onload=function(){
-
+        reader.onload=(){
+                
             var fileData=reader.result;
             var workbook=XLSX.read(fileData,{type:'binary'});
             workbook.SheetNames.forEach(function(SheetName){
-
+function
                 var rowObject =XLSX.utils.sheet_to_row_object_array(workbook.Sheets[SheetName]);
                 excelJsonObj=rowObject;
             });
@@ -26,7 +25,6 @@
             }
         };
         reader.readAsBinaryString(input.files[0]);
-
         }; 
     }
 

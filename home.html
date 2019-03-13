@@ -6,32 +6,25 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-            <link rel="stylesheet" href="C:\Users\s530486\Web apps\bricks\home.css">
-            
-            <title>Find your Brick</title>
-            <link rel="stylesheet" type="text/css" href="home.css">
-
-            
-                
+            <link rel="stylesheet" href="home.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+ <script src="xlsx.full.min.js"></script>
+ <script src="search/data.js"></script>
+ <script src="search/search.js"></script>
+ <link rel="stylesheet" type="text/css" href="home.css">
+            <title>Find your Brick</title>         
                 </head>
                 <body>
-                
-                <h1>    Hii Bearcats, Find your brick here!!</h1>
-                <div id="inscriptionform">
-                <tr>
-                  <td>
+                    <div id="searchform"></div>
+                <h1> Hii Bearcats, Find your brick here!!</h1>
                       <b>Name  :  </b>
-                  </td>
-                  <td>
-                      <input type= "text" placeholder= "Enter Name" name="">
-                  </td>
-                </tr>
-                </br>
-              </br>
-                  <button type="Submit" class="btn">Search</button>
+                    <input name="Locate" id="search" type="text">
+                    <!-- <button type="button" value="submit" onClick="populateResults()"> search </button> -->
+                  <button type="button" class="btn"  value="submit" onClick="populateResults()">Search</button>
                   <button type="Reset" class="btn">Reset</button>
                 </form>
               </div>  
-                    
+              <div id="results" >
+                </div>     
             </body>
 </html>
