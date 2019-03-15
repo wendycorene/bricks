@@ -1,15 +1,4 @@
-#searchform {
-    background-color: lightgrey;
-    width: 1000px;
-    border: 15px solid green;
-    background-image: url("namedbricks.jpg");
-    padding: 25px;
-    margin-left:100px;
-    margin-right: 100px;
-    text-align: center;
-    box-align: center;
-    float: center;
-  }
+
   #backgroundimage{
   background-image: url("backgroundchange.gif");
     height: 100%;
