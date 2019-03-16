@@ -18,11 +18,12 @@
   }
   
   #results td, #results th {
-    border: 1px solid black;
-    padding: 15px;
+    border: 1px solid white;
+    padding: 7px;
   }
   
   #results tr:nth-child(even){background-color: #f2f2f2;}
+  #results tr:nth-child(odd){background-color: #f2f2f2;}
   
   #results tr:hover {background-color: yellow;}
   
