@@ -8,18 +8,21 @@ body{
     background-size: cover;         
     background-position: center center;
     background-attachment: fixed;
+    text-align: center;
     img {
         opacity: 0.5;
         filter: alpha(opacity=50); 
       }
+    
 }
 
 ul {
-  list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color:#006747;
+  text-align: center;
+  color:white;
 }
 
 li {
