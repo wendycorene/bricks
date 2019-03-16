@@ -8,5 +8,9 @@ body{
     background-size: cover;         
     background-position: center center;
     background-attachment: fixed;
+    img {
+        opacity: 0.5;
+        filter: alpha(opacity=50); 
+      }
 }
                
