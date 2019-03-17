@@ -14,8 +14,8 @@ req.onload = function(e) {
   var second_sheet_name = workbook.SheetNames[1];
   var pavers = workbook.Sheets[second_sheet_name];
   paversJSON = XLSX.utils.sheet_to_json(pavers,{raw:true});  
- // document.getElementById("results").style.color="white";
- // document.getElementById("results").style.opacity=0.3; 
+  //document.getElementById("results").style.color="white";
+  //document.getElementById("results").style.opacity=0.3; 
 
 }
   req.send();

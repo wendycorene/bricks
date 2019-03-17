@@ -1,15 +1,4 @@
-#searchform {
-    background-color: lightgrey;
-    width: 1000px;
-    border: 15px solid green;
-    background-image: url("namedbricks.jpg");
-    padding: 25px;
-    margin-left:100px;
-    margin-right: 100px;
-    text-align: center;
-    box-align: center;
-    float: center;
-  }
+
   #backgroundimage{
   background-image: url("backgroundchange.gif");
     height: 100%;
@@ -29,11 +18,12 @@
   }
   
   #results td, #results th {
-    border: 1px solid black;
-    padding: 15px;
+    border: 1px solid white;
+    padding: 7px;
   }
   
   #results tr:nth-child(even){background-color: #f2f2f2;}
+  #results tr:nth-child(odd){background-color: #f2f2f2;}
   
   #results tr:hover {background-color: yellow;}
   
