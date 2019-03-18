@@ -8,7 +8,6 @@
     tr,td,table{
         border: 1px solid black;
         padding: 10px;
-
     }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -21,22 +20,22 @@
         <div id="searchform">
         <p>Enter donor name or Description : </p>
         <form onreset="clearForm(form)">
-        <input name="search" id="search" type="text">
-        </br>
-        </br>
-        <button type="button" value="submit" onClick="populateResults()"> search </button>
-        <input type="reset">
-        <div id="count"></div>
-          </form>
-        </div>
-          <script>
-            function clearForm(form) {
-                document.body.innerHTML = "";
-                var $f = $(form);
-                var $f = $f.find(':input').not(':button, :submit, :reset, :hidden');
-                $f.val('').attr('value','').removeAttr('checked').removeAttr('selected');
-            }
-        </script>
+          <b>Name  :   <input name="Locate" id="search" type="text"></b>
+      <!-- <button type="button" value="submit" onClick="populateResults()"> search </button> -->
+    <button type="button" class="btn"  value="submit" onClick="populateResults()">Search</button>
+    <button type="Reset" class="btn">Reset</button>
+  </form>
+</div>  
+<script>
+  function clearForm(form) {
+      document.body.innerHTML = "";
+      var $f = $(form);
+      var $f = $f.find(':input').not(':button, :submit, :reset, :hidden');
+      $f.val('').attr('value','').removeAttr('checked').removeAttr('selected');
+  }
+</script>
+ <div id="results" >
+</div>   
         
  </body>
 </html>

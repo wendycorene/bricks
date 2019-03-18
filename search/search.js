@@ -26,11 +26,9 @@ function populateResults() {
     tr.appendChild(td3);
     tr.appendChild(td4);
     table.appendChild(tr);
-    
       var node = document.createElement("p");  
       node.appendChild(table);             
       document.getElementById("results").appendChild(node); 
-
   for (var x in bricksJSON)
     {
       var toCheck = bricksJSON[x].DonorName.toLowerCase(); 
