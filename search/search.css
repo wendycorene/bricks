@@ -18,6 +18,7 @@
     background-size: cover;         
     background-position: center center;
     background-attachment: fixed;
+    opacity: 0.2;
   }
 
   #results div{
@@ -27,6 +28,7 @@
     background: rgba(0, 151, 19, 0.6)
     
   }
+  
   
   #results td, #results th {
     border: 1px solid black;
