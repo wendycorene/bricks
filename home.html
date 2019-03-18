@@ -8,22 +8,35 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
             <link rel="stylesheet" href="home.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            
  <script src="xlsx.full.min.js"></script>
  <script src="search/data.js"></script>
  <script src="search/search.js"></script>
  <link rel="stylesheet" type="text/css" href="home.css">
-            <title>Find your Brick</title>         
+            <title> Hii Bearcats, Find your brick here!!</title>         
                 </head>
                 <body>
+                  <h1> Hii Bearcats, Find your brick here!!</h1>
+                  
+                  <br>
+
                     <div id="searchform"></div>
-                <h1> Hii Bearcats, Find your brick here!!</h1>
                       <b>Name  :  </b>
+                      <form onreset="clearForm(form)">
                     <input name="Locate" id="search" type="text">
                     <!-- <button type="button" value="submit" onClick="populateResults()"> search </button> -->
                   <button type="button" class="btn"  value="submit" onClick="populateResults()">Search</button>
                   <button type="Reset" class="btn">Reset</button>
                 </form>
               </div>  
+              <script>
+                function clearForm(form) {
+                    document.body.innerHTML = "";
+                    var $f = $(form);
+                    var $f = $f.find(':input').not(':button, :submit, :reset, :hidden');
+                    $f.val('').attr('value','').removeAttr('checked').removeAttr('selected');
+                }
+            </script>
               <div id="results" >
                 </div>     
             </body>

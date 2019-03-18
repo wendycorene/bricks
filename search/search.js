@@ -26,6 +26,7 @@ function populateResults() {
     tr.appendChild(td3);
     tr.appendChild(td4);
     table.appendChild(tr);
+    
       var node = document.createElement("p");  
       node.appendChild(table);             
       document.getElementById("results").appendChild(node); 
@@ -54,6 +55,7 @@ function populateResults() {
     tr.appendChild(td4);
     table.appendChild(tr);
       var node = document.createElement("p");  
+      // p.href="www.google.com"
       // var textnode = document.createTextNode(counter+ ") " + toCheck+ "  "+ bricksJSON[x].Zone);
       node.appendChild(table);             
       document.getElementById("results").appendChild(node); 
@@ -117,7 +119,9 @@ function populateResults() {
           tr.appendChild(td2);
           tr.appendChild(td3);
           tr.appendChild(td4);
+       
           table.appendChild(tr);
+
         var node = document.createElement("p");  
         // var textnode = document.createTextNode(paverscount+ ") " + toCheck+" "+paversJSON[x].Zone);
         node.appendChild(table);                             
