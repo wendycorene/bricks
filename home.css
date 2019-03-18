@@ -2,6 +2,7 @@
 body{
 
     background-image: url("ezgif.com-gif-maker.gif");
+   
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;         
@@ -10,30 +11,39 @@ body{
     
 }
      h1{
+         text-align: left;
          color: white;
+         font-weight:bold; 
      }    
+
+    b{
+     color: white;
+     font-size: 18px;
+     font-weight:bold; 
+    }
 #results tr:hover {background-color: rgb(97, 150, 172);} 
-#results tr:nth-child(odd){background-color: #4c9170;}
-/*#results tr:nth-child(even){background-color: rgb(97, 150, 172);}*/
+#results tr:nth-child(odd){background-color: #006747;}
+#results tr:nth-child(even){background-color:gray ;}/*rgb(97, 150, 172)*/
 #results th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color:#4c9170; 
+    background-color:#006747; 
     
     color: white;
   }
-  .button {
-    background-color: #4CAF50; /* Green */
+  button {
+    background-color:gray; /* Green */
     border: none;
-    color: white;
+    color: black;
     padding: 10px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 17px;
     margin: 2px 1px;
     cursor: pointer;
+    font-weight:bold; 
   }
   #results div{
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
