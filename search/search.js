@@ -43,6 +43,7 @@ function populateResults() {
     var text2 = document.createTextNode( bricksJSON[x].Personalization);
     var text3 = document.createTextNode( bricksJSON[x].Zone);
     var text0 = document.createTextNode( counter);
+    var link = document.createTextNode( bricksJSON[x].DonorName); 
     td1.appendChild(text0);
     td2.appendChild(text1);
     td3.appendChild(text2);
