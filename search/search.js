@@ -26,9 +26,12 @@ function populateResults() {
     tr.appendChild(td3);
     tr.appendChild(td4);
     table.appendChild(tr);
-      var node = document.createElement("p");  
+      var node = document.createElement("p");
+      // node.href='http://www.google.com';  
+      // node.textContent=table;
       node.appendChild(table);             
-      document.getElementById("results").appendChild(node); 
+      // document.getElementById("results").appendChild(node).href='http://www.google.com'; 
+
   for (var x in bricksJSON)
     {
       var toCheck = bricksJSON[x].DonorName.toLowerCase(); 
