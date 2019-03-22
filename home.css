@@ -32,11 +32,41 @@ body{
          font-weight:bold; 
      }     */
 
+      ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #006747;
+    height: 70px;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  a{
+    text-align: center;
+  }
+  li a:hover {
+    color:white;
+  }
+  
+
     b{
-     color:rgb(250, 250, 250); 
+     color:black; 
      font-size: 18px;
      font-weight:bold; 
     }
+
+
     #results {
       margin: 5%;
     }
@@ -72,7 +102,7 @@ body{
     
   }
   h1{
-    color: #fff;
+    color: black;
   }
   #searchform {
     position: absolute;
