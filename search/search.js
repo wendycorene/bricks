@@ -39,7 +39,8 @@ function populateResults() {
      
         if (toCheck.includes(val))
       {
-        if(doname!=toCheck) {
+        // if(doname!=toCheck) 
+        {
     var tr = document.createElement('tr');   
     var td1 = document.createElement('td');
     var td2 = document.createElement('td');
@@ -74,7 +75,7 @@ function populateResults() {
       var descriptioncheck = bricksJSON[x].Personalization.toLowerCase();       
       var doname=bricksJSON[x].DonorName.toLowerCase();  
       if (descriptioncheck.includes(val)){
-       if(doname!=descriptioncheck){
+       if(!doname.includes(val)){
         var tr = document.createElement('tr');   
         var td1 = document.createElement('td');
         var td2 = document.createElement('td');
@@ -109,7 +110,8 @@ function populateResults() {
         var doname=paversJSON[x].DonorName.toLowerCase();
         if (toCheck.includes(val))
         {
-          if(doname!=toCheck){
+          //  if(!doname.includes(val))
+          {
           var tr = document.createElement('tr');   
           var td1 = document.createElement('td');
           var td2 = document.createElement('td');
@@ -145,7 +147,8 @@ function populateResults() {
         var doname=paversJSON[x].DonorName.toLowerCase();
         if (PersonalizationCheck.includes(val))
         {
-          if(doname!=PersonalizationCheck){
+          if(!doname.includes(val))
+          {
           var tr = document.createElement('tr');   
           var td1 = document.createElement('td');
           var td2 = document.createElement('td');
