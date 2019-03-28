@@ -34,9 +34,12 @@ function populateResults() {
 
   for (var x in bricksJSON)
     {
-      var toCheck = bricksJSON[x].DonorName.toLowerCase(); 
+      var toCheck = bricksJSON[x].DonorName.toLowerCase();
+      var doname=bricksJSON[x].DonorName.toLowerCase();
+     
         if (toCheck.includes(val))
       {
+        if(doname!=toCheck) {
     var tr = document.createElement('tr');   
     var td1 = document.createElement('td');
     var td2 = document.createElement('td');
@@ -57,20 +60,21 @@ function populateResults() {
     tr.appendChild(td4);
     table.appendChild(tr);
       var node = document.createElement("p");  
-      // p.href="www.google.com"
-      // var textnode = document.createTextNode(counter+ ") " + toCheck+ "  "+ bricksJSON[x].Zone);
-      node.appendChild(table);             
+      node.appendChild(table);
+      node.href="www.google.com";
       document.getElementById("results").appendChild(node); 
       counter++; 
-      }
+      }}
      
       var brickscount1=counter;
     }
       for (var x in bricksJSON)
     {
 
-      var descriptioncheck = bricksJSON[x].Personalization.toLowerCase();         
+      var descriptioncheck = bricksJSON[x].Personalization.toLowerCase();       
+      var doname=bricksJSON[x].DonorName.toLowerCase();  
       if (descriptioncheck.includes(val)){
+       if(doname!=descriptioncheck){
         var tr = document.createElement('tr');   
         var td1 = document.createElement('td');
         var td2 = document.createElement('td');
@@ -95,15 +99,17 @@ function populateResults() {
       document.getElementById("results").appendChild(node);     
  
       brickscount1++; 
-      }
+      }}
       var paverscount=brickscount1;
      
     }
     for (x in paversJSON)
     {
         var toCheck = paversJSON[x].DonorName.toLowerCase();
+        var doname=paversJSON[x].DonorName.toLowerCase();
         if (toCheck.includes(val))
         {
+          if(doname!=toCheck){
           var tr = document.createElement('tr');   
           var td1 = document.createElement('td');
           var td2 = document.createElement('td');
@@ -129,15 +135,17 @@ function populateResults() {
         node.appendChild(table);                             
         document.getElementById("results").appendChild(node);      
         paverscount++; 
-      }
+      }}
       var Personalizationpaverscount=paverscount;
     
     }
     for (x in paversJSON)
     {
         var PersonalizationCheck = paversJSON[x].Personalization.toLowerCase();
+        var doname=paversJSON[x].DonorName.toLowerCase();
         if (PersonalizationCheck.includes(val))
         {
+          if(doname!=PersonalizationCheck){
           var tr = document.createElement('tr');   
           var td1 = document.createElement('td');
           var td2 = document.createElement('td');
@@ -161,7 +169,7 @@ function populateResults() {
         node.appendChild(table);                             
         document.getElementById("results").appendChild(node);      
         Personalizationpaverscount++; 
-      }
+      }}
     
     }
      var paverscounter=Personalizationpaverscount-1;
