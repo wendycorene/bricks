@@ -1,6 +1,6 @@
 <script>
 $(document).ready(function(){
-var url = "https://wendycorene.github.io/bricks/MultiSheetBrickData.xlsx";
+var url = "https://wendycorene.github.io/bricks/data/MultiSheetBrickData.xlsx";
 /* set up async GET request */
 var req = new XMLHttpRequest();
 req.open("GET", url, true);
@@ -11,21 +11,21 @@ req.onload = function(e) {
   var first_sheet_name = workbook.SheetNames[0];
   var bricks = workbook.Sheets[first_sheet_name];
   var bricksJSON = XLSX.utils.sheet_to_json(bricks,{raw:true});
-  document.getElementById("wrapper").append('Bricks');  
+  document.getElementById("wrapper").append('Bricks');
   for(var i=0; i< bricksJSON.length; i++){
-    var node = document.createElement("p");  
+    var node = document.createElement("p");
     var textnode = document.createTextNode(bricksJSON[i].DonorName+ " "+ bricksJSON[i].Personalization.replace(/\r|\n|"|/gm, "") +"      "  +bricksJSON[i].Zone+" "+bricksJSON[i].BrickNumber+" "+bricksJSON[i].Line1+" "+bricksJSON[i].Line2+" "+bricksJSON[i].Line3 );         // Create a text node
-    node.appendChild(textnode);                             
-    document.getElementById("wrapper").appendChild(node);      
+    node.appendChild(textnode);
+    document.getElementById("wrapper").appendChild(node);
   }
   var second_sheet_name = workbook.SheetNames[1];
   var pavers = workbook.Sheets[second_sheet_name];
-  var paversJSON = XLSX.utils.sheet_to_json(pavers,{raw:true});  
+  var paversJSON = XLSX.utils.sheet_to_json(pavers,{raw:true});
   for(var i=0; i< paversJSON.length; i++){
-    var node = document.createElement("p");              
+    var node = document.createElement("p");
     var textnode = document.createTextNode(paversJSON[i].DonorName + "  " + paversJSON[i].Personalization.replace(/\r|\n|"|/gm, "") + " " +paversJSON[i].Zone+" "+paversJSON[i].BrickNumber );         // Create a text node
-    node.appendChild(textnode);                             
-    document.getElementById("wrapper").appendChild(node);      
+    node.appendChild(textnode);
+    document.getElementById("wrapper").appendChild(node);
   }
 
  function myfunction() {
