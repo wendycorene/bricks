@@ -1,4 +1,12 @@
 
+function showImage(){
+  var imgSource = document.getElementById("outputImage");
+  var zones=document.getElementById("tr").lastChild.innerHTML;
+  var path="C:/Users/S534090/Desktop/bricks/bricks/Maps/"+zones+".jpg";
+  imgSource.setAttribute("src", "path");
+  //C:/Users/S534090/Desktop/bricks/bricks/Maps/1south.jpg
+}
+
 function populateResults() {
     document.getElementById("results").innerHTML = "";
   var val = document.getElementById("search").value.toLowerCase();
@@ -7,6 +15,7 @@ function populateResults() {
   {
   if(val != ""){
     var counter = 1;
+    var anchorElement = document.createElement("a");
     var table = document.createElement('table');
     var tr = document.createElement('tr');   
     var td1 = document.createElement('th');
@@ -25,12 +34,10 @@ function populateResults() {
     tr.appendChild(td2);
     tr.appendChild(td3);
     tr.appendChild(td4);
-    table.appendChild(tr);
-      var node = document.createElement("p");
-      // node.href='http://www.google.com';  
-      // node.textContent=table;
-      node.appendChild(table);             
-      // document.getElementById("results").appendChild(node).href='http://www.google.com'; 
+    anchorElement.appendChild(tr);
+    table.appendChild(anchorElement);
+    // table.appendChild(tr);
+      
 
   for (var x in bricksJSON)
     {
@@ -39,8 +46,17 @@ function populateResults() {
      
         if (toCheck.includes(val))
       {
+
+        var node = document.createElement("p");
+      node.href='http://www.google.com';  
+      node.textContent=table;
+      node.appendChild(table);             
+      document.getElementById("results").innerHTML.href='http://www.google.com'; 
         // if(doname!=toCheck) 
         {
+          var anchorElement = document.createElement("a");
+          anchorElement.setAttribute("style", "display:block;");
+          anchorElement.setAttribute("onclick", "showImage()");
     var tr = document.createElement('tr');   
     var td1 = document.createElement('td');
     var td2 = document.createElement('td');
@@ -59,7 +75,10 @@ function populateResults() {
     tr.appendChild(td2);
     tr.appendChild(td3);
     tr.appendChild(td4);
-    table.appendChild(tr);
+   
+    anchorElement.appendChild(tr);
+    table.appendChild(anchorElement);
+    // table.appendChild(tr);
       var node = document.createElement("p");  
       node.appendChild(table);
       node.href="www.google.com";
@@ -76,6 +95,9 @@ function populateResults() {
       var doname=bricksJSON[x].DonorName.toLowerCase();  
       if (descriptioncheck.includes(val)){
        if(!doname.includes(val)){
+
+        var anchorElement = document.createElement("a");
+        anchorElement.setAttribute("style", "display:block;");
         var tr = document.createElement('tr');   
         var td1 = document.createElement('td');
         var td2 = document.createElement('td');
@@ -93,7 +115,8 @@ function populateResults() {
         tr.appendChild(td2);
         tr.appendChild(td3);
         tr.appendChild(td4);
-        table.appendChild(tr);
+        anchorElement.appendChild(tr);
+        table.appendChild(anchorElement);
       var node = document.createElement("p");  
       // var textnode = document.createTextNode(brickscount1+ ") " + descriptioncheck+" "+bricksJSON[x].Zone);
       node.appendChild(table);                             
@@ -112,6 +135,9 @@ function populateResults() {
         {
           //  if(!doname.includes(val))
           {
+            var anchorElement = document.createElement("a");
+            anchorElement.setAttribute("style", "display:block;");
+      
           var tr = document.createElement('tr');   
           var td1 = document.createElement('td');
           var td2 = document.createElement('td');
@@ -129,8 +155,9 @@ function populateResults() {
           tr.appendChild(td2);
           tr.appendChild(td3);
           tr.appendChild(td4);
-       
-          table.appendChild(tr);
+          anchorElement.appendChild(tr);
+          table.appendChild(anchorElement);
+          // table.appendChild(tr);
 
         var node = document.createElement("p");  
         // var textnode = document.createTextNode(paverscount+ ") " + toCheck+" "+paversJSON[x].Zone);
@@ -149,6 +176,8 @@ function populateResults() {
         {
           if(!doname.includes(val))
           {
+            var anchorElement = document.createElement("a");
+            anchorElement.setAttribute("style", "display:block;");
           var tr = document.createElement('tr');   
           var td1 = document.createElement('td');
           var td2 = document.createElement('td');
@@ -166,7 +195,9 @@ function populateResults() {
           tr.appendChild(td2);
           tr.appendChild(td3);
           tr.appendChild(td4);
-          table.appendChild(tr);
+          anchorElement.appendChild(tr);
+          table.appendChild(anchorElement);
+          // table.appendChild(tr);
         var node = document.createElement("p");  
         // var textnode = document.createTextNode(Personalizationpaverscount+ ") " + PersonalizationCheck+paversJSON[x].Zone);
         node.appendChild(table);                             
