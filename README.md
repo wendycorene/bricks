@@ -9,9 +9,6 @@
 ### GitHub Page
 https://wendycorene.github.io/bricks/
 
-### GitHub Page
-https://wendycorene.github.io/bricks/
-
 ### Group members
 Priyanka Bonam - Documentation Manager  
 Wendy Eloe - Repo Manager  
