@@ -8,12 +8,12 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
             <link rel="stylesheet" href="home.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-            
- <script src="xlsx.full.min.js"></script>
+
+ <script src="lib/xlsx.full.min.js"></script>
  <script src="search/data.js"></script>
  <script src="search/search.js"></script>
  <link rel="stylesheet" type="text/css" href="home.css">
- 
+
  <ul>
   <li><a class="active" href="printPDF.html">Map</a></li>
   <li><a></a></li>
@@ -31,7 +31,7 @@
   <li><a style="font-size: xx-large; padding: 14px 16px;display: block;
       color: white;
       text-align: center;
-      font-weight:bold; 
+      font-weight:bold;
       padding: -20px 293px;
       text-decoration: none;">Northwest Missouri State University</a></li>
 </ul>
@@ -39,18 +39,18 @@
 <div class="container">
 <div class="row">
 <div class="col-sm-2">
-<img style = " position: relative; 
+<img style = " position: relative;
 border-radius: 4px;
 padding: 5px;
 width: 150px; top: -64px;
-right: 35px; " id="imagehtml" src="northwestlogo.png" alt="">
+right: 35px; " id="imagehtml" src="img/northwestlogo.png" alt="">
 </div>
 </div>
 
-            <title>Find your brick here!!</title>         
+            <title>Find your brick here!!</title>
                 </head>
-               
-                
+
+
                 <body>
                   <h1 class = "text"> Hii Bearcats, Find your brick here!!</h1>
                 </body>
@@ -58,14 +58,14 @@ right: 35px; " id="imagehtml" src="northwestlogo.png" alt="">
                   <br>
 
                     <!-- <div id="searchform"></div> -->
-              
+
                       <form onreset="clearForm(form)">
                         <b>Name  :   <input name="Locate" id="search" type="text"></b>
                     <!-- <button type="button" value="submit" onClick="populateResults()"> search </button> --></br>
                   <button type="button" class="btn"  value="submit" onClick="populateResults()">Search</button>
                   <button type="Reset" class="btn">Reset</button>
                 </form>
-              </div>  
+              </div>
               <script>
                 function clearForm(form) {
                     document.body.innerHTML = "";
@@ -75,6 +75,6 @@ right: 35px; " id="imagehtml" src="northwestlogo.png" alt="">
                 }
             </script>
               <div id="results" >
-                </div>     
+                </div>
             </body>
 </html>
