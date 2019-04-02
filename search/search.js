@@ -1,6 +1,9 @@
 
 function showImage(){
   var imgSource = document.getElementById("outputImage");
+  // var x=document.getElementById(td4).innerHTML;
+  // var path="C:/Users/S534090/Desktop/bricks/bricks/img/Maps/1north.jpg";
+  //   console.log("path");
   imgSource.setAttribute("src", "C:/Users/S534090/Desktop/bricks/bricks/img/Maps/1south.jpg");
   //C:/Users/S534090/Desktop/bricks/bricks/Maps/1south.jpg
 }
