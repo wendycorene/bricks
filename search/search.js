@@ -1,11 +1,9 @@
 
 function showImage(){
+  var str = event.target.parentElement.childNodes[3].innerHTML.replace(/\s/g, "").toLowerCase().concat(".jpg");
   var imgSource = document.getElementById("outputImage");
-  // var x=document.getElementById(td4).innerHTML;
-  // var path="C:/Users/S534090/Desktop/bricks/bricks/img/Maps/1north.jpg";
-  //   console.log("path");
-  imgSource.setAttribute("src", "C:/Users/S534090/Desktop/bricks/bricks/img/Maps/1south.jpg");
-  //C:/Users/S534090/Desktop/bricks/bricks/Maps/1south.jpg
+  imgSource.setAttribute("width", 1000, "margin-left", 1000,"border-width", 100 );
+  imgSource.setAttribute("src", "maps/"+str);
 }
 
 function populateResults() {
@@ -16,7 +14,6 @@ function populateResults() {
   {
   if(val != ""){
     var counter = 1;
-    var anchorElement = document.createElement("a");
     var table = document.createElement('table');
     var tr = document.createElement('tr');
     var td1 = document.createElement('th');
@@ -35,9 +32,8 @@ function populateResults() {
     tr.appendChild(td2);
     tr.appendChild(td3);
     tr.appendChild(td4);
-    anchorElement.appendChild(tr);
-    table.appendChild(anchorElement);
-    // table.appendChild(tr);
+    // anchorElement.appendChild(tr);
+    table.appendChild(tr);
 
 
   for (var x in bricksJSON)
@@ -47,18 +43,8 @@ function populateResults() {
 
         if (toCheck.includes(val))
       {
-
-        var node = document.createElement("p");
-      node.href='http://www.google.com';
-      node.textContent=table;
-      node.appendChild(table);
-      document.getElementById("results").innerHTML.href='http://www.google.com';
-        // if(doname!=toCheck)
-        {
-          var anchorElement = document.createElement("a");
-          anchorElement.setAttribute("style", "display:block;");
-          anchorElement.setAttribute("onclick", "showImage()");
     var tr = document.createElement('tr');
+    tr.setAttribute("onclick", "showImage()");
     var td1 = document.createElement('td');
     var td2 = document.createElement('td');
     var td3 = document.createElement('td');
@@ -76,16 +62,12 @@ function populateResults() {
     tr.appendChild(td2);
     tr.appendChild(td3);
     tr.appendChild(td4);
-
-    anchorElement.appendChild(tr);
-    table.appendChild(anchorElement);
-    // table.appendChild(tr);
+    table.appendChild(tr);
       var node = document.createElement("p");
       node.appendChild(table);
-      node.href="www.google.com";
-      document.getElementById("results").appendChild(node);
+       document.getElementById("results").appendChild(node);
       counter++;
-      }}
+      }
 
       var brickscount1=counter;
     }
@@ -96,10 +78,8 @@ function populateResults() {
       var doname=bricksJSON[x].DonorName.toLowerCase();
       if (descriptioncheck.includes(val)){
        if(!doname.includes(val)){
-
-        var anchorElement = document.createElement("a");
-        anchorElement.setAttribute("style", "display:block;");
         var tr = document.createElement('tr');
+        tr.setAttribute("onclick", "showImage()");
         var td1 = document.createElement('td');
         var td2 = document.createElement('td');
         var td3 = document.createElement('td');
@@ -116,13 +96,10 @@ function populateResults() {
         tr.appendChild(td2);
         tr.appendChild(td3);
         tr.appendChild(td4);
-        anchorElement.appendChild(tr);
-        table.appendChild(anchorElement);
+        table.appendChild(tr);
       var node = document.createElement("p");
-      // var textnode = document.createTextNode(brickscount1+ ") " + descriptioncheck+" "+bricksJSON[x].Zone);
       node.appendChild(table);
       document.getElementById("results").appendChild(node);
-
       brickscount1++;
       }}
       var paverscount=brickscount1;
@@ -134,12 +111,8 @@ function populateResults() {
         var doname=paversJSON[x].DonorName.toLowerCase();
         if (toCheck.includes(val))
         {
-          //  if(!doname.includes(val))
-          {
-            var anchorElement = document.createElement("a");
-            anchorElement.setAttribute("style", "display:block;");
-
           var tr = document.createElement('tr');
+          tr.setAttribute("onclick", "showImage()");
           var td1 = document.createElement('td');
           var td2 = document.createElement('td');
           var td3 = document.createElement('td');
@@ -155,17 +128,13 @@ function populateResults() {
           tr.appendChild(td1);
           tr.appendChild(td2);
           tr.appendChild(td3);
-          tr.appendChild(td4);
-          anchorElement.appendChild(tr);
-          table.appendChild(anchorElement);
-          // table.appendChild(tr);
-
+          tr.appendChild(td4); 
+          table.appendChild(tr);
         var node = document.createElement("p");
-        // var textnode = document.createTextNode(paverscount+ ") " + toCheck+" "+paversJSON[x].Zone);
         node.appendChild(table);
         document.getElementById("results").appendChild(node);
         paverscount++;
-      }}
+      }
       var Personalizationpaverscount=paverscount;
 
     }
@@ -177,9 +146,10 @@ function populateResults() {
         {
           if(!doname.includes(val))
           {
-            var anchorElement = document.createElement("a");
-            anchorElement.setAttribute("style", "display:block;");
+            
+     
           var tr = document.createElement('tr');
+          tr.setAttribute("onclick", "showImage()");
           var td1 = document.createElement('td');
           var td2 = document.createElement('td');
           var td3 = document.createElement('td');
@@ -196,11 +166,8 @@ function populateResults() {
           tr.appendChild(td2);
           tr.appendChild(td3);
           tr.appendChild(td4);
-          anchorElement.appendChild(tr);
-          table.appendChild(anchorElement);
-          // table.appendChild(tr);
+          table.appendChild(tr);
         var node = document.createElement("p");
-        // var textnode = document.createTextNode(Personalizationpaverscount+ ") " + PersonalizationCheck+paversJSON[x].Zone);
         node.appendChild(table);
         document.getElementById("results").appendChild(node);
         Personalizationpaverscount++;
