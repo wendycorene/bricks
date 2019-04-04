@@ -8,6 +8,7 @@ function populateResults() {
   if(val != ""){
     var counter = 1;
     var table = document.createElement('table');
+    table.setAttribute("id","rowCtr");
     var tr = document.createElement('tr');   
     var td1 = document.createElement('th');
     var td2 = document.createElement('th');
@@ -149,7 +150,8 @@ function populateResults() {
         {
           if(!doname.includes(val))
           {
-          var tr = document.createElement('tr');   
+          var tr = document.createElement('tr');  
+         //tr.setAttribute("onClick","data()");
           var td1 = document.createElement('td');
           var td2 = document.createElement('td');
           var td3 = document.createElement('td');
@@ -167,17 +169,58 @@ function populateResults() {
           tr.appendChild(td3);
           tr.appendChild(td4);
           table.appendChild(tr);
-        var node = document.createElement("p");  
+       // var node = document.createElement("p");
+        //node.setAttribute("href", "dhfsdhj");  
+       // node.setAttribute("id","data");
         // var textnode = document.createTextNode(Personalizationpaverscount+ ") " + PersonalizationCheck+paversJSON[x].Zone);
-        node.appendChild(table);                             
-        document.getElementById("results").appendChild(node);      
+        //node.appendChild(table);                             
+        document.getElementById("results").appendChild(table);      
         Personalizationpaverscount++; 
       }}
     
     }
+
+init();
+
      var paverscounter=Personalizationpaverscount-1;
      var x = document.createElement("H1");
     var count = document.createTextNode("Total "+paverscounter+" results found for word  "+val);
     x.appendChild(count);
     document.getElementById("results").appendChild(x);   
   } }}
+  
+
+  
+  function init(){
+  
+      addRowHandlers('rowCtr');
+  
+  }
+  
+  function addRowHandlers(tableId) {
+      if(document.getElementById(tableId)!=null){
+          var table = document.getElementById(tableId);
+          var rows = table.getElementsByTagName('tr');
+          console.log(rows.length)
+          var ocb = '';
+          var area = '';
+          var name = '';
+          var cell = '';
+          for ( var i = 1; i < rows.length; i++) {
+  
+              rows[i].i = i;
+              rows[i].onclick = function() {
+  
+                  ocb = table.rows[this.i].cells[0].innerHTML;                
+                  area = table.rows[this.i].cells[1].innerHTML;
+                  name = table.rows[this.i].cells[2].innerHTML;
+                  cell = table.rows[this.i].cells[3].innerHTML;
+                  console.log('ocb: '+ocb+' area: '+area+' name: '+name+' cell: '+cell);
+                  sessionStorage.setItem("name", name);
+                  sessionStorage.setItem("cell", cell);
+                  window.location.href = "secondpage.html";
+                  
+              };
+          }
+      }
+  }
