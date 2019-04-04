@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+    <script type="text/javascript">
+console.log(localStorage.getItem('imgSelected'));
+var y = localStorage.getItem('imgSelected');
+var x = "img/Maps/"+y+".jpg";
+var z = "Your brick is in Zone 0"+y.substring(0,1)+" and the Inscription is:";
+
+console.log(x);
+  $(function(){
+    $("#imagehtml2").attr("src", x);
+    $("#interpolation").html(localStorage.getItem('interpolation'));
+    $("#heading").html(z);
+
+});
+
+</script>
     <!-- <div class="container">
             <div class="row">
             <div class="col-sm-2">
@@ -27,7 +43,7 @@
           padding: 0;
           overflow: hidden;
           background-color: #006747;
-          height: 70px;
+          height: 65px;
         }
 
         li {
@@ -63,7 +79,7 @@
 background-repeat:  no-repeat;
 background-attachment: fixed;
 background-size:  cover;
-background-color: #999;" background="img/HughesFieldHouse.jpg">
+background-color: #999;" background="">
         <ul>
                 <li><a style = "background-color:#006747;
                     position: relative;
@@ -71,7 +87,7 @@ background-color: #999;" background="img/HughesFieldHouse.jpg">
                     border: none;
                     
                     color:white;
-                    padding: 20px 18px;
+                    padding: 16px 18px;
                     text-align: center;
                     text-decoration: none;
                     display: inline-block;
@@ -105,19 +121,21 @@ background-color: #999;" background="img/HughesFieldHouse.jpg">
           padding: 5px;
           
           width: 150px; top: -44px;
-          right: 35px; " id="imagehtml" src="img/northwestlogo.png" alt="">
+          right: 25px; " id="imagehtml" src="img/northwestlogo.png" alt="">
          </div>
          <div class="col-sm-8">
-           <h1 style="font-weight:600;
-           color:#006747;
-           padding: -20px 293px">Find your Brick!!!</h1>
-          <h1 style="font-weight:600;
-          color:#006747;"> Hughes Field House Stadium
+           <h1 style="font-weight:500;
+           color:white;
+           
+           ">Find your Brick!!!</h1>
+          <h1 style="font-weight:500;
+          color:white;"> Hughes Field House Stadium
           </div>
 
           </div>
+         
     <div>
-        <img  id="imagehtml" src="img/originalMap.jpg" alt="" style =  "position: relative;display: block;
+        <img  id="imagehtml2" src="" alt="" style =  "position: relative;display: block;
         margin-left: auto;
         margin-right: auto;
         width: 70%;
@@ -134,19 +152,20 @@ background-color: #999;" background="img/HughesFieldHouse.jpg">
     
        
     
-    <center><h2 style="font-weight:600;
-        color:black;">Your brick is in Zone 06 and the Inscription is:</h2></center>
+    <center><h2 id="heading" style="font-weight:600;
+        color:black;"></h2></center>
     <div>
-        <img id="imagehtml" src="img/hurly.jpg" alt="" style =  "display: block;
+        <!-- <img id="imagehtml" src="img/hurly.jpg" alt="" style =  "display: block;
         margin-left: auto;
         margin-right: auto;
         width: 30%;
-        height: 30%;">
+        height: 30%;"> -->
+        <h2 id="interpolation" style="color:white;border-bottom: 8px solid #006747;border-left: 8px solid #006747;border-right: 8px solid #006747;border-top: 8px solid #006747;"></h2>
         <br/>
         <br/>
 
 
-        <center>    <a href="#" onclick="PrintImage('img/originalMap.jpg'); return false;">
+        <center>    <a href="#" onclick="PrintImage(); return false;">
             <button id="printImage">Print</button>
         </a> </center>
     </div>
@@ -159,6 +178,8 @@ background-color: #999;" background="img/HughesFieldHouse.jpg">
                 "<img src='" + source + "' /></body></html>";
         }
         function PrintImage(source) {
+            var y = localStorage.getItem('imgSelected');
+var source = "img/Maps/"+y+".jpg";
             Pagelink = "about:blank";
             var pwa = window.open(Pagelink, "_new");
             pwa.document.open();
