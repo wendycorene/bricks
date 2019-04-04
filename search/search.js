@@ -1,20 +1,26 @@
 
-function showImage(x){
-  
-  var word = x.split(",");
-  localStorage.setItem("imgSelected",word[0]);
-  localStorage.setItem("interpolation",word[1]);
+function showImage(){
 
+  var x = document.getElementById("results");
+  if (x.style.display == "none") {
+    x.style.display = "block";
+    // console.log(x.style.display);
+  } else {
+    x.style.display = "none";
+  }
+  var str = event.target.parentElement.childNodes[3].innerHTML.replace(/\s/g, "").toLowerCase().concat(".jpg");
+  var imgSource = document.getElementById("outputImage");
+  imgSource.setAttribute("width", 1000, "margin-left", 1000,"border-width", 100 );
+  imgSource.setAttribute("src", "maps/"+str);
+  var brickd=document.getElementById("brickimage");
+  brickd.setAttribute("width", 400, "height", 228,"padding",200);
+  brickd.setAttribute("src", "brick.jpg");
+  var strdata=event.target.parentElement.childNodes[2].innerHTML;
+  var lines=document.getElementById("brick");
+  // lines.innerText=strdata;
  
-  window.location.href = 'printPDF.html';
-  // var imgSource = document.getElementById("outputImage");
-
-  // var x=document.getElementById(td4).innerHTML;
-  // console.log(x);
-  // var path="C:/Users/S534090/Desktop/bricks/bricks/img/Maps/1north.jpg";
-  //   console.log("path");
-  // imgSource.setAttribute("src", "C:/Users/S534090/Desktop/bricks/bricks/img/Maps/1south.jpg");
-  //C:/Users/S534090/Desktop/bricks/bricks/Maps/1south.jpg
+  console.log(strdata);
+  // brickd.innerText=strdata;
 }
 
 function populateResults() {
