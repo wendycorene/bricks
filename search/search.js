@@ -18,7 +18,6 @@ function showImage(){
   var strdata=event.target.parentElement.childNodes[2].innerHTML;
   var lines=document.getElementById("brick");
   // lines.innerText=strdata;
- 
   console.log(strdata);
   // brickd.innerText=strdata;
 }
