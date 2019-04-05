@@ -202,8 +202,8 @@ init();
           var table = document.getElementById(tableId);
           var rows = table.getElementsByTagName('tr');
           console.log(rows.length)
-          var ocb = '';
-          var area = '';
+          var sno = '';
+          var donar = '';
           var name = '';
           var cell = '';
           for ( var i = 1; i < rows.length; i++) {
@@ -211,11 +211,11 @@ init();
               rows[i].i = i;
               rows[i].onclick = function() {
   
-                  ocb = table.rows[this.i].cells[0].innerHTML;                
-                  area = table.rows[this.i].cells[1].innerHTML;
+                  sno = table.rows[this.i].cells[0].innerHTML;                
+                  donar = table.rows[this.i].cells[1].innerHTML;
                   name = table.rows[this.i].cells[2].innerHTML;
                   cell = table.rows[this.i].cells[3].innerHTML;
-                  console.log('ocb: '+ocb+' area: '+area+' name: '+name+' cell: '+cell);
+                  console.log('sno: '+sno+' donar: '+donar+' name: '+name+' cell: '+cell);
                   sessionStorage.setItem("name", name);
                   sessionStorage.setItem("cell", cell);
                   window.location.href = "secondpage.html";
