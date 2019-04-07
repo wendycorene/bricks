@@ -12,17 +12,27 @@ function showImage(){
   var imgSource = document.getElementById("outputImage");
   imgSource.setAttribute("width", 1000, "margin-left", 1000,"border-width", 100 );
   imgSource.setAttribute("src", "maps/"+str);
-  var brickd=document.getElementById("brickimage");
-  brickd.setAttribute("width", 400, "height", 228,"padding",200);
-  brickd.setAttribute("src", "brick.jpg");
-  var strdata=event.target.parentElement.childNodes[2].innerHTML;
-  var lines=document.getElementById("brick");
+  // var brickd=document.getElementById("brickimage");
+  // brickd.setAttribute("width", 400, "height", 228,"padding",200);
+  // brickd.setAttribute("src", "brick.jpg");
+  // var strdata=event.target.parentElement.childNodes[2].innerHTML;
+  
+  document.getElementById("brick").innerHTML = event.target.parentElement.childNodes[2].innerHTML;
+  document.getElementById("brick").style.display = "block";
   // lines.innerText=strdata;
   console.log(strdata);
   // brickd.innerText=strdata;
 }
 
 function populateResults() {
+
+  var x = document.getElementById("results");
+  if (x.style.display == "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+
     document.getElementById("results").innerHTML = "";
   var val = document.getElementById("search").value.toLowerCase();
   var res=val.slice(-1);
