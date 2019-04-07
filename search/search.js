@@ -20,7 +20,7 @@ function showImage(){
   document.getElementById("brick").innerHTML = event.target.parentElement.childNodes[2].innerHTML;
   document.getElementById("brick").style.display = "block";
   // lines.innerText=strdata;
-  console.log(strdata);
+
   // brickd.innerText=strdata;
 }
 
