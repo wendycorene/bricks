@@ -73,10 +73,8 @@ function populateResults() {
       {
 
         var node = document.createElement("p");
-      node.href='http://www.google.com';
       node.textContent=table;
       node.appendChild(table);
-      document.getElementById("results").innerHTML.href='http://www.google.com';
         // if(doname!=toCheck)
         {
           
