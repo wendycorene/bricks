@@ -1,8 +1,8 @@
 
 body{
 
-    background-image: url("img/ezgif.com-gif-maker.gif");
-   
+    background-image: url("img/Capture (1).png");
+    opacity: 1.5;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;         
@@ -82,9 +82,10 @@ body{
     color: white;
   }
   button {
-    background-color:gray; /* Green */
+    background-color:rgb(115, 168, 97); /* Green  rgb(185, 239, 167)  rgb(201, 239, 74)*/
     border: none;
-    color: black;
+    color: white;
+
     padding: 10px 25px;
     text-align: center;
     text-decoration: none;
@@ -103,6 +104,7 @@ body{
   }
   h1{
     color: white;
+    opacity: 1.5;
   }
   #searchform {
     position: absolute;
@@ -110,9 +112,11 @@ body{
   input#search{
     background-color:#f5f5f5;
     color:black;
+    opacity: 1.5;
+  
 }
 table, th, td{
     color: white;
-    border: 2px solid rgb(18, 19, 18);
+    border: 1px solid rgb(18, 19, 18);
  
   }
