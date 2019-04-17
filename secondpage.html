@@ -8,13 +8,83 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="home.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js">
+        type="text/javascript">
+        console.log(localStorage.getItem('imgSelected'));
+var x = localStorage.getItem('imgSelected').toLowerCase();
+var y = "img/Maps/"+x+".jpg";
+var z = "Your brick is in Zone 0"+x.substring(0,1)+" and the Inscription is:";
+
+console.log(x);
+  $(function(){
+    $("#imagehtml2").attr("src", y);
+    $("#interpolation").html(localStorage.getItem('interpolation'));
+    $("#heading").html(z);
+
+});
+
+</script>
 
 
 <link rel="stylesheet" type="text/css" href="home.css">
 <body onload="myFunction()">
 <p id="name" style="width:90px;height:40px;float:left;"></p>
 <p id="cell" style="width:90px;height:40px;float:left;"></p>
+<!-- //<img src=c".jpg" style="width:500px;height:600px;"> -->
+<ul>
+    <li><a style = "background-color:#006747;
+        position: relative;
+       
+        border: none;
+        
+        color:white;
+        padding: 16px 18px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        margin: 4px 2px;
+        cursor: pointer;"class="active" href="home.html">Home</a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
 
+    <li><a style="font-size: xx-large; padding: 14px 16px;display: block;
+        color: white;
+        text-align: center;
+        padding: -20px 293px;
+        text-decoration: none;">Northwest Missouri State University</a></li>
+  </ul>
+
+  <div class="container">
+    <div class="row">
+    <div class="col-sm-4">
+<img style = " position: relative;
+border-radius: 4px;
+padding: 5px;
+
+width: 150px; top: -44px;
+right: 25px; " id="imagehtml" src="img/northwestlogo.png" alt="">
+</div>
+<div class="col-sm-8">
+<h1 style="font-weight:500;
+color:white;
+
+">Find your Brick!!!</h1>
+<h1 style="font-weight:500;
+color:white;"> Hughes Field House Stadium
+</div>
+
+</div>
+</div>
 </body>
 <script>
 function myFunction(){
@@ -27,4 +97,64 @@ function myFunction(){
 
 
 </script>
+<!-- 
+<body style= "	background-position: center center;
+background-repeat:  no-repeat;
+background-attachment: fixed;
+background-size:  cover;
+background-color: #999;" background="">
+        <ul>
+                <li><a style = "background-color:#006747;
+                    position: relative;
+                   
+                    border: none;
+                    
+                    color:white;
+                    padding: 16px 18px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 18px;
+                    margin: 4px 2px;
+                    cursor: pointer;"class="active" href="home.html">Home</a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+
+                <li><a style="font-size: xx-large; padding: 14px 16px;display: block;
+                    color: white;
+                    text-align: center;
+                    padding: -20px 293px;
+                    text-decoration: none;">Northwest Missouri State University</a></li>
+              </ul>
+
+              <div class="container">
+                <div class="row">
+                <div class="col-sm-4">
+          <img style = " position: relative;
+          border-radius: 4px;
+          padding: 5px;
+          
+          width: 150px; top: -44px;
+          right: 25px; " id="imagehtml" src="img/northwestlogo.png" alt="">
+         </div>
+         <div class="col-sm-8">
+           <h1 style="font-weight:500;
+           color:white;
+           
+           ">Find your Brick!!!</h1>
+          <h1 style="font-weight:500;
+          color:white;"> Hughes Field House Stadium
+          </div>
+
+          </div>
+          </div> -->
 </html>
