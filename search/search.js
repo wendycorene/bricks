@@ -18,38 +18,25 @@ function showImage()
     if(p==bricksJSON[x].Personalization)
     {
       console.log(p);
+      document.getElementById("brick").innerHTML="<br/>";
       document.getElementById("brick").innerHTML=bricksJSON[x].Line1+ "<br />";
       // document.write("\n");
       document.getElementById("brick").innerHTML+=bricksJSON[x].Line2+"<br />";
       // document.write("\n");
       document.getElementById("brick").innerHTML+=bricksJSON[x].Line3;
-      console.log(bricksJSON[x].Line3);
-
-      // for(i=1;i<=3;i++)
-      // {
-      //   var y="Line";
-      //   var l=y.concat(i);
-      //   var l1=bricksJSON[x].Line1;
-      //   console.log(l1);
-      //   document.getElementById("brick").innerHTML=l1;
-      //   // console.log(l1.innerHTML);
-      // }
-      // var l1=bricksJSON[x].Line1;
-      // var l2=bricksJSON[x].Line2;
-      // var l2=bricksJSON[x].Line3;
-
+      console.log(bricksJSON[x].Line1);
     }
   }
   for(x in paversJSON)
   {
     if(p==paversJSON[x].Personalization)
     {
-      console.log(p);
+      
+      document.getElementById("brick").innerHTML="\n";
       document.getElementById("brick").innerHTML=paversJSON[x].Line1+ "<br />";
       document.getElementById("brick").innerHTML+=paversJSON[x].Line2+"<br />";
       document.getElementById("brick").innerHTML+=paversJSON[x].Line3;
-      console.log(paversJSON[x].Line3);
-
+      console.log(bricksJSON[x].Line1);
     }}
   document.getElementById("brick").style.display = "block";
 }
@@ -65,7 +52,7 @@ function populateResults() {
   var res=val.slice(-1);
   if(res!=0)
   {
-  if(val != ""){
+  if(val!= ""){
     var counter = 1;
     var anchorElement = document.createElement("a");
     var table = document.createElement('table');
@@ -176,7 +163,6 @@ function populateResults() {
         anchorElement.appendChild(tr);
         table.appendChild(anchorElement);
       var node = document.createElement("p");
-      // var textnode = document.createTextNode(brickscount1+ ") " + descriptioncheck+" "+bricksJSON[x].Zone);
       node.appendChild(table);
       document.getElementById("results").appendChild(node);
       // console.log(text3)
