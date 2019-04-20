@@ -40,7 +40,17 @@ function showImage()
 
     }
   }
-  // document.getElementById("brick").innerHTML =l1.innerHTML;
+  for(x in paversJSON)
+  {
+    if(p==paversJSON[x].Personalization)
+    {
+      console.log(p);
+      document.getElementById("brick").innerHTML=paversJSON[x].Line1+ "<br />";
+      document.getElementById("brick").innerHTML+=paversJSON[x].Line2+"<br />";
+      document.getElementById("brick").innerHTML+=paversJSON[x].Line3;
+      console.log(paversJSON[x].Line3);
+
+    }}
   document.getElementById("brick").style.display = "block";
 }
 function populateResults() {
