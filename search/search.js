@@ -31,12 +31,30 @@ function showImage()
   {
     if(p==paversJSON[x].Personalization)
     {
-      
+      console.log("@"+paversJSON[x].Line4+"@");
       document.getElementById("brick").innerHTML="\n";
       document.getElementById("brick").innerHTML=paversJSON[x].Line1+ "<br />";
       document.getElementById("brick").innerHTML+=paversJSON[x].Line2+"<br />";
-      document.getElementById("brick").innerHTML+=paversJSON[x].Line3;
-      console.log(bricksJSON[x].Line1);
+      document.getElementById("brick").innerHTML+=paversJSON[x].Line3+ "<br />";
+      if(paversJSON[x].Line4!=="undefined")
+      {
+        document.getElementById("brick").innerHTML+=paversJSON[x].Line4+ "<br />";
+        // paversJSON[x].Line4+ "<br />";
+      }
+      // else 
+      // {
+      //   document.getElementById("brick").innerHTML+=paversJSON[x].Line4+ "<br />";
+      // }
+    if(paversJSON[x].Line5!=="undefined")
+      {
+        document.getElementById("brick").innerHTML+=paversJSON[x].Line5+ "<br />";
+      }
+     if(paversJSON[x].Line6!=="undefined")
+      {
+        document.getElementById("brick").innerHTML+=paversJSON[x].Line6+ "<br />";
+      }
+      // document.getElementById("brick").innerHTML+=paversJSON[x].Line6;
+      console.log("@"+paversJSON[x].Line4+"@");
     }}
   document.getElementById("brick").style.display = "block";
 }
