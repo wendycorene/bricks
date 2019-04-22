@@ -38,16 +38,14 @@
       padding: -20px 293px;
       text-decoration: none;">Northwest Missouri State University</a></li>
 </ul>
-<div class="container">
   <img style = " position: relative;
   border-radius: 4px;
   padding: 5px;
   width: 150px; top: -64px;
   right: 35px; left: 25px " id="imagehtml" src="northwestlogo.png" alt="">
-  </div>
  </head>
     <body>
-        <div id="searchform">
+        <id="searchform" >
         <p>Enter donor name or Description : </p>
         <form onreset="clearForm(form)">
           <b>Name  :   <input name="Locate" id="search" type="text"></b>
@@ -56,14 +54,6 @@
     <button type="Reset" class="btn">Reset</button>
   </form>
 </div>  
-<script>
-  function clearForm(form) {
-      document.body.innerHTML = "";
-      var $f = $(form);
-      var $f = $f.find(':input').not(':button, :submit, :reset, :hidden');
-      $f.val('').attr('value','').removeAttr('checked').removeAttr('selected');
-  }
-</script>
  <div id="results" >
 </div>   
  <div id="output">
@@ -82,6 +72,13 @@
  function myFunction() {
    window.print();
  }
+  function clearForm(form) {
+      document.body.innerHTML = "";
+      var $f = $(form);
+      var $f = $f.find(':input').not(':button, :submit, :reset, :hidden');
+      $f.val('').attr('value','').removeAttr('checked').removeAttr('selected');
+  }
+
  </script>
  </body>
 </html>
