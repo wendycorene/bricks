@@ -45,7 +45,7 @@ function showImage()
       // {
       //   document.getElementById("brick").innerHTML+=paversJSON[x].Line4+ "<br />";
       // }
-    if(paversJSON[x].Line5!=="undefined")
+    if(paversJSON[x].Line5.trim()!=="")
       {
         document.getElementById("brick").innerHTML+=paversJSON[x].Line5+ "<br />";
       }
