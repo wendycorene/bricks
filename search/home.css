@@ -11,7 +11,7 @@ body{
 
 .text {
 position: relative;
-text-align: left;
+text-align: center;
 font-size: 40px;
 font-weight: 400;
 color: #f5f5f5;
@@ -90,7 +90,7 @@ button {
 }
 
 #print {
-  right: 30px;
+  
   background-color:rgb(115, 168, 97); /* Green */
   border: none;
   color: white;
