@@ -12,7 +12,16 @@ function showImage()
   var imgSource = document.getElementById("outputImage");
   imgSource.setAttribute("width", 1000, "margin-left", 1000,"border-width", 100 );
   imgSource.setAttribute("src", "maps/"+str);
-  var p=event.target.parentElement.childNodes[2].innerHTML;
+  // var p=event.target.parentElement.childNodes[2].innerHTML;
+  var nameOnBrick = event.target.parentElement.childNodes[2].innerText.split("<td>").join("").split("\n").join("<br>");
+  document.getElementById("brick").innerHTML = nameOnBrick;
+
+  console.log(event.target.parentElement.childNodes[2].innerHTML);
+  console.log(event.target.parentElement.childNodes[2].innerText);
+
+  console.log(event.target.parentElement.childNodes[2].innerText.replace("<td>","").replace("\n","<br>"));
+  console.log(event.target.parentElement.childNodes[2].innerText.split("<td>").join("").split("\n").join("<br>"));
+  document.getElementById("brick").style.display = "block";
  
   for(x in bricksJSON)
   {
