@@ -1,5 +1,5 @@
-<html>
- <head>
+<html ng-app='myapp'>
+    <head>
   <title>Donor Search</title>
   <style>
     table {
@@ -8,8 +8,16 @@
     tr,td,table{
         border: 1px solid black;
         padding: 10px;
-        }
+    }
   </style>
+  
+            <meta name ="viewport" content = "width = device-width, initial-scale= 1">
+            <meta charset="utf-8">
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+            <link rel="stylesheet" href="home.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
  <script src="xlsx.full.min.js"></script>
  <script src="data.js"></script>
@@ -45,6 +53,7 @@
   right: 35px; left: 25px " id="imagehtml" src="northwestlogo.png" alt="">
  </head>
     <body>
+        <h1 class = "text"> Hii Bearcats, Find your brick here!!!</h1>
         <id="searchform" >
         <p>Enter donor name or Description : </p>
         <form onreset="clearForm(form)">
@@ -66,7 +75,7 @@
  <div id="brick">
  </div>  
  
- <button onclick="myFunction()">Print </button>
+ <button id="print" onclick="myFunction()">Print </button>
 
  <script>
  function myFunction() {
