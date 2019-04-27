@@ -39,7 +39,6 @@
   <li><a></a></li>
   <li><a></a></li>
   <li><a></a></li>
-  
 
   <li><a style="font-size: xx-large; padding: 14px 16px;display: block;
       color: white;
@@ -79,13 +78,8 @@
  </style>
  <div id="brick">
  </div>  
- 
- <button id="print" onclick="myFunction()"> Print </button>
 
  <script>
- function myFunction() {
-   window.print();
- }
   function clearForm(form) {
       document.body.innerHTML = "";
       var $f = $(form);
@@ -94,5 +88,29 @@
   }
 
  </script>
+
+
+<style>
+@media print{
+body * {
+visibility: hidden;
+}
+#brick, #output * {
+  visibility: visible;
+}
+
+#output {
+position: absolute;
+top:0px;
+}
+#brick {
+position: center;
+}
+}
+</style>
+<button id= "print" onclick="window.print();"> Print
+</button>
+</style>
+
  </body>
 </html>
