@@ -93,8 +93,11 @@ button {
   
   background-color:rgb(115, 168, 97); /* Green */
   border: none;
+  position: absolute;
+  right: 0;
+  top: 80;
   color: white;
-  padding: 5px 15px;
+  padding: 4px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
