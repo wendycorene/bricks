@@ -66,7 +66,7 @@ li a:hover {
   }
 #results tr:hover {background-color: rgb(97, 150, 172);} 
 #results tr:nth-child(odd){background-color: #006747;}
-#results tr:nth-child(even){background-color:gray ;}/*rgb(97, 150, 172)*/
+#results tr:nth-child(even){background-color:rgb(161, 157, 131);}/* #8D8741  rgb(97, 150, 172)*/
 #results th {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -97,7 +97,7 @@ button {
   right: 0;
   top: 80;
   color: white;
-  padding: 4px 10px;
+  padding: 4px 13px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -124,7 +124,7 @@ input#search{
 }
 table, th, td{
 
-  color: white;
+  color:white;
   /* border: 2px solid rgb(18, 19, 18); */
 
 }
