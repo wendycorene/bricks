@@ -12,13 +12,14 @@ function showImage()
   var imgSource = document.getElementById("outputImage");
   imgSource.setAttribute("width", 1000, "margin-left", 1000,"border-width", 100 );
   imgSource.setAttribute("src", "maps/"+str);
+  // var m = document.createElement("H1");
+  // var printpersonalization = document.createTextNode("Your Brick is in "+event.target.parentElement.childNodes[3].innerHTML+" and the inscription is ");
+  // m.appendChild(printpersonalization);
+  // document.getElementById("output").appendChild(m);
+
   var p=event.target.parentElement.childNodes[2].innerHTML;
   var nameOnBrick = event.target.parentElement.childNodes[2].innerText.split("<td>").join("").split("\n").join("<br>");
   document.getElementById("brick").innerHTML = nameOnBrick;
-
-  console.log(event.target.parentElement.childNodes[2].innerHTML);
-  console.log(event.target.parentElement.childNodes[2].innerText);
-
   console.log(event.target.parentElement.childNodes[2].innerText.replace("<td>","").replace("\n","<br>"));
   console.log(event.target.parentElement.childNodes[2].innerText.split("<td>").join("").split("\n").join("<br>"));
   document.getElementById("brick").style.display = "block";
@@ -53,28 +54,15 @@ function showImage()
       if(typeof paversJSON[x].Line4 !== "undefined")
       {
         document.getElementById("brick").innerHTML+=paversJSON[x].Line4+ "<br />";
-        // paversJSON[x].Line4+ "<br />";
       }
-      // else 
-      // {
-      //   document.getElementById("brick").innerHTML+=paversJSON[x].Line4+ "<br />";
-      // }
-    // if(paversJSON[x].Line5.trim()!=="")
-    //   {
-    //     document.getElementById("brick").innerHTML+=paversJSON[x].Line5+ "<br />";
-    //   }
-    //  if(paversJSON[x].Line6!=="undefined")
-    //   {
-    //     document.getElementById("brick").innerHTML+=paversJSON[x].Line6+ "<br />";
-    //   }
-      // document.getElementById("brick").innerHTML+=paversJSON[x].Line6;
+
       console.log("@"+paversJSON[x].Line4+"@");
     }}
   document.getElementById("brick").style.display = "block";
 }
 
 
-
+// --------------------------------------search functionality--------------------------------------
 
 function populateResults() {
   var x = document.getElementById("results");
@@ -106,17 +94,11 @@ function populateResults() {
     td2.appendChild(text1);
     td3.appendChild(text2);
     td4.appendChild(text3);
-
     tr.appendChild(td1);
     tr.appendChild(td2);
     tr.appendChild(td3);
     tr.appendChild(td4);
-
-
     table.appendChild(tr);
-
-
-
   for (var x in bricksJSON)
     {
       var toCheck = bricksJSON[x].DonorName.toLowerCase();
@@ -136,10 +118,6 @@ function populateResults() {
     var text1 = document.createTextNode( bricksJSON[x].DonorName);
     var text2 = document.createTextNode( bricksJSON[x].Personalization);
     var text3 = document.createTextNode( bricksJSON[x].Zone);
-
-    // var text4 = document.createTextNode( bricksJSON[x].Line1);
-    // var text5 = document.createTextNode( bricksJSON[x].Line2);
-    // var text6 = document.createTextNode( bricksJSON[x].Line3);
     var text0 = document.createTextNode( counter);
     var link = document.createTextNode( bricksJSON[x].DonorName);
     td1.appendChild(text0);
