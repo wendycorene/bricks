@@ -20,8 +20,8 @@ function showImage()
   var p=event.target.parentElement.childNodes[2].innerHTML;
   var nameOnBrick = event.target.parentElement.childNodes[2].innerText.split("<td>").join("").split("\n").join("<br>");
   document.getElementById("brick").innerHTML = nameOnBrick;
-  console.log(event.target.parentElement.childNodes[2].innerText.replace("<td>","").replace("\n","<br>"));
-  console.log(event.target.parentElement.childNodes[2].innerText.split("<td>").join("").split("\n").join("<br>"));
+  // console.log(event.target.parentElement.childNodes[2].innerText.replace("<td>","").replace("\n","<br>"));
+  // console.log(event.target.parentElement.childNodes[2].innerText.split("<td>").join("").split("\n").join("<br>"));
   document.getElementById("brick").style.display = "block";
  
   for(x in bricksJSON)
@@ -31,9 +31,7 @@ function showImage()
       console.log(p);
       document.getElementById("brick").innerHTML="<br/>";
       document.getElementById("brick").innerHTML=bricksJSON[x].Line1+ "<br />";
-      // document.write("\n");
       document.getElementById("brick").innerHTML+=bricksJSON[x].Line2+"<br />";
-      // document.write("\n");
       document.getElementById("brick").innerHTML+=bricksJSON[x].Line3;
       console.log(bricksJSON[x].Line1);
     }
@@ -55,8 +53,14 @@ function showImage()
       {
         document.getElementById("brick").innerHTML+=paversJSON[x].Line4+ "<br />";
       }
-
-      console.log("@"+paversJSON[x].Line4+"@");
+      if(typeof paversJSON[x].Line5 !== "undefined")
+      {
+        document.getElementById("brick").innerHTML+=paversJSON[x].Line5+ "<br />";
+      }
+      if(typeof paversJSON[x].Line6 !== "undefined")
+      {
+        document.getElementById("brick").innerHTML+=paversJSON[x].Line6+ "<br />";
+      }
     }}
   document.getElementById("brick").style.display = "block";
 }
