@@ -258,7 +258,7 @@ function populateResults() {
     }
      var paverscounter=Personalizationpaverscount-1;
      var x = document.createElement("H1");
-    var count = document.createTextNode("Total "+paverscounter+" results found for word  "+val);
+    var count = document.createTextNode("Total "+paverscounter+" results found for the word  "+val);
     x.appendChild(count);
     document.getElementById("results").appendChild(x);
   } }}
