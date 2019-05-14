@@ -1,4 +1,4 @@
-
+/* setting the background image*/
 body{
 
   background-image: url("Capture (1).png");
@@ -8,7 +8,7 @@ body{
   background-position: center center;
   background-attachment: fixed; 
 }
-
+/* To set the size and test color for the heading on the main page*/
 .text {
 position: relative;
 text-align: center;
@@ -31,6 +31,7 @@ font-family: verdana;
   background-color: #006747;
   height: 70px;
 }
+/*class to set the font family and the text color*/
 p{
   color:black; 
   font-size: 18px;
@@ -143,6 +144,7 @@ table, th, td{
  padding-top: 25px;
 
 } 
+/* setting the paver image to print the inscription in it*/
 #brick {
 background-image: url("blankPaverEdited.jpg");
 height: 260px;
@@ -167,4 +169,14 @@ margin-top: 50px;
   content: "";
   display: table;
   clear: both;
+}
+/* setting the table size and border*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+tr,td,table{
+  border: 1px solid black;
+  padding: 10px;
+  
 }
