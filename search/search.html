@@ -45,7 +45,7 @@
         <div id="searchform" >
   
         <h1 class = "text"> Hi Bearcats, Find your brick here!!!</h1>
-        <p>Enter donor name or Description : </p>
+        <p class="donor">Enter donor name or Description : </p>
         <form onreset="clearForm(form)">
           <b><input name="Locate" id="search" type="text"></b>
     <br/>
@@ -60,9 +60,7 @@
    <h>
    <img src="" alt="" id="outputImage">
  </div>   
- <style>
- 
- </style>
+
  <div id="brick">
  </div>  
 
@@ -75,28 +73,9 @@
   }
 
  </script>
-<style>
-@media print{
-body * {
-visibility: hidden;
-}
-#brick, #output * {
-  visibility: visible;
-}
-#output {
-position: absolute;
-top:0px;
-}
-#brick {
-position: absolute;
-top:  270;
-right:200;
-}
-}
-</style>
+ <!--Button to print the map and inscription on a page -->
 <button id= "print" onclick="window.print();"> Print
 </button>
-</style>
 
  </body>
 </html>

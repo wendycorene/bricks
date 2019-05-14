@@ -32,8 +32,7 @@ font-family: verdana;
   height: 70px;
 }
 /*class to set the font family and the text color*/
-p{
-  color:black; 
+.donor {
   font-size: 18px;
   font-weight:bold; 
   /*font-family:Arial, Helvetica, sans-serif;*/
@@ -72,6 +71,9 @@ li a:hover {
   }
   #results {
     padding: 10px;
+    color: #f5f5f5;
+    font-weight:bold;
+font-family: verdana;
   }
 #results tr:hover {background-color: rgb(97, 150, 172);} 
 #results tr:nth-child(odd){background-color: #006747;}
@@ -115,15 +117,7 @@ button {
   cursor: pointer;
   font-weight:bold; 
 }
-#results div{
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  margin-top: 100px;
-  padding-top: 50px;
-  background: rgba(0, 151, 19, 0.6)
-  
-}
+
 h1{
   color: white;
 }
@@ -131,13 +125,26 @@ input#search{
   background-color:#f5f5f5;
   color:black;
 }
+
+/* setting the table size and border*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+tr,td,table{
+  border: 1px solid black;
+  padding: 10px;
+  
+}
+
 table, th, td{
 
-  color:white;
+  color:#f5f5f5;
   /* border: 2px solid rgb(18, 19, 18); */
-
-}
-#output{
+  font-family: verdana;
+  font-size: 14px;
+ }
+ #output{
   margin-left: 25px;
  margin-right: auto;
  margin-top: 100px;
@@ -180,3 +187,21 @@ tr,td,table{
   padding: 10px;
   
 }
+/* Functionality to print the map and inscription on a page*/
+@media print{
+  body * {
+  visibility: hidden;
+  }
+  #brick, #output * {
+    visibility: visible;
+  }
+  #output {
+  position: absolute;
+  top:0px;
+  }
+  #brick {
+  position: absolute;
+  top:  270;
+  right:200;
+  }
+  }
