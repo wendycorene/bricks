@@ -1,17 +1,7 @@
 <html>
     <head>
   <title>Donor Search</title>
-  <style>
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
-    tr,td,table{
-        border: 1px solid black;
-        padding: 10px;
-
-    }
-  </style>
+ 
             <meta name ="viewport" content = "width = device-width, initial-scale= 1">
             <meta charset="utf-8">
             <meta name="description" content="">
@@ -57,9 +47,9 @@
         <div id="searchform" >
 
         <h1 class = "text"> Hi Bearcats, Find your brick here!!!</h1>
-        <p>Enter donor name or Description : </p>
+        <p class= "donor"> Enter donor name or Inscription : </p>
         <form onreset="clearForm(form)">
-          <b><input name="Locate" id="search" type="text" placeholder=" Enter Name or Description" size="30"></b> 
+          <b><input name="Locate" id="search" type="text" placeholder=" Enter Name or Inscription" size="30"></b> 
     <br/>
     <br/>
       <button type="button" class="btn"  value="submit" onClick="populateResults()">Search</button>
@@ -72,9 +62,7 @@
    <h>
    <img src="" alt="" id="outputImage">
  </div>
- <style>
-
- </style>
+ 
  <div id="brick">
  </div>
 
@@ -87,28 +75,11 @@
   }
 
  </script>
-<style>
-@media print{
-body * {
-visibility: hidden;
-}
-#brick, #output * {
-  visibility: visible;
-}
-#output {
-position: absolute;
-top:0px;
-}
-#brick {
-position: absolute;
-top:  270;
-right:200;
-}
-}
-</style>
+
+
 <button id= "print" onclick="window.print();"> Print
 </button>
-</style>
+
 
  </body>
 </html>

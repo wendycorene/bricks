@@ -1,7 +1,7 @@
 
 body{
 
-  background-image: url("img//capture1 (2).png");
+  background-image: url("img//capture.png");
   /* filter : blur(3px);
   -webkit-filter: blur(3px); */
   /* opacity: 0.5; */
@@ -34,7 +34,7 @@ font-family: verdana;
   background-color: #006747;
   height: 70px;
 }
-p{
+.donor{
   color:black;
   font-size: 18px;
   font-weight:bold;
@@ -133,12 +133,25 @@ input#search{
   background-color:#f5f5f5;
   color:black;
 }
+/* setting the table size and border*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+tr,td,table{
+  border: 1px solid black;
+  padding: 10px;
+  
+}
+
 table, th, td{
 
-  color:white;
+  color:#f5f5f5;
   /* border: 2px solid rgb(18, 19, 18); */
+  font-family: verdana;
+  font-size: 14px;
+ }
 
-}
 #output{
   margin-left: 25px;
  margin-right: auto;
@@ -171,3 +184,33 @@ margin-top: 50px;
   display: table;
   clear: both;
 }
+
+
+/* setting the table size and border*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+tr,td,table{
+  border: 1px solid black;
+  padding: 10px;
+  
+}
+/* Functionality to print the map and inscription on a page*/
+@media print{
+  body * {
+  visibility: hidden;
+  }
+  #brick, #output * {
+    visibility: visible;
+  }
+  #output {
+  position: absolute;
+  top:0px;
+  }
+  #brick {
+  position: absolute;
+  top:  270;
+  right:200;
+  }
+  }
