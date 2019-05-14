@@ -3,7 +3,8 @@
 * `data/`: Excel files
 * `img/`: All images, maps, videos, etc.
 * `search/`: Active development of excel searching and filtering utilities
-* `prototype/`: Development playground and testing
+* `prototype/`: Old files from development kept for posterity
+* `docs/`: Documentation, templates, and files for the Brick Finder project that are more specifically related to coursework
 * `main/`: HTML and CSS files for the currently ACTIVE working prototype
 
 ### GitHub Page
