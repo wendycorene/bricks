@@ -1,0 +1,114 @@
+<html ng-app='myapp'>
+    <head>
+  <title>Donor Search</title>
+  <style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    tr,td,table{
+        border: 1px solid black;
+        padding: 10px;
+
+    }
+  </style>
+
+            <meta name ="viewport" content = "width = device-width, initial-scale= 1">
+            <meta charset="utf-8">
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+            <link rel="stylesheet" href="home.css">
+  <script src="lib/jquery-3.1.1.min.js"></script>
+ <script src="lib/xlsx.full.min.js"></script>
+ <script src="data.js"></script>
+ <script src="search.js"></script>
+ <link rel="stylesheet" type="text/css" href="home.css">
+
+ <ul>
+  <!-- <li><a class="active" href="printPDF.html">Map</a></li> -->
+  <li><a></a></li>
+  <li><a></a></li>
+  <li><a></a></li>
+  <li><a></a></li>
+  <li><a></a></li>
+  <li><a></a></li>
+  <li><a></a></li>
+  <li><a></a></li>
+  <li><a></a></li>
+  <li><a></a></li>
+  <li><a></a></li>
+
+  <li><a style="font-size: xx-large; padding: 14px 16px;display: block;
+      color: white;
+      text-align: center;
+      font-weight:bold;
+      padding: -20px 293px;
+      text-decoration: none;">Northwest Missouri State University</a></li>
+</ul>
+  <img style = " position: relative;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px; top: -64px;
+  right: 35px; left: 25px " id="imagehtml" src="img/northwestlogo.png" alt="">
+ </head>
+    <body>
+        <div id="searchform" >
+
+        <h1 class = "text"> Hi Bearcats, Find your brick here!!!</h1>
+        <p>Enter donor name or Description : </p>
+        <form onreset="clearForm(form)">
+          <b><input name="Locate" id="search" type="text"></b>
+    <br/>
+    <br/>
+      <button type="button" class="btn"  value="submit" onClick="populateResults()">Search</button>
+    <button type="Reset" class="btn">Reset</button>
+  </form>
+</div>
+ <div id="results" >
+</div>
+ <div id="output">
+   <h>
+   <img src="" alt="" id="outputImage">
+ </div>
+ <style>
+
+ </style>
+ <div id="brick">
+ </div>
+
+ <script>
+  function clearForm(form) {
+      document.body.innerHTML = "";
+      var $f = $(form);
+      var $f = $f.find(':input').not(':button, :submit, :reset, :hidden');
+      $f.val('').attr('value','').removeAttr('checked').removeAttr('selected');
+  }
+
+ </script>
+<style>
+@media print{
+body * {
+visibility: hidden;
+}
+#brick, #output * {
+  visibility: visible;
+}
+#output {
+position: absolute;
+top:0px;
+}
+#brick {
+position: absolute;
+top:  270;
+right:200;
+}
+}
+</style>
+<button id= "print" onclick="window.print();"> Print
+</button>
+</style>
+
+ </body>
+</html>
