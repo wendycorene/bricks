@@ -1,85 +1,96 @@
+<!--Main Html file to display the cotent on the web page-->
 <html>
-    <head>
+
+<head>
+  <!--Title of our page-->
   <title>Donor Search</title>
- 
-            <meta name ="viewport" content = "width = device-width, initial-scale= 1">
-            <meta charset="utf-8">
-            <meta name="description" content="">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-            <link rel="stylesheet" href="home.css">
+  <!--Use of bootstarp library to make the page responsive-->
+  <meta name="viewport" content="width = device-width, initial-scale= 1">
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <!--Link to the CSS folder to make the page visually look good
+  <link rel="stylesheet" href="home.css">-->
   <script src="lib/jquery-3.1.1.min.js"></script>
- <script src="lib/xlsx.full.min.js"></script>
- <script src="data.js"></script>
- <script src="search.js"></script>
- <script src="maps.js"></script>
- <link rel="stylesheet" type="text/css" href="home.css">
-
- <ul>
-  <!-- <li><a class="active" href="printPDF.html">Map</a></li> -->
-  <li><a></a></li>
-  <li><a></a></li>
-  <li><a></a></li>
-  <li><a></a></li>
-  <li><a></a></li>
-  <li><a></a></li>
-  <li><a></a></li>
-  <li><a></a></li>
-  <li><a></a></li>
-  <li><a></a></li>
-  <li><a></a></li>
-
-  <li><a style="font-size: xx-large; padding: 14px 16px;display: block;
+  <script src="lib/xlsx.full.min.js"></script>
+  <!--Link to the JavaScript files that are used to print the serach results, map and inscription on the brick-->
+  <script src="data.js"></script>
+  <script src="search.js"></script>
+  <script src="maps.js"></script>
+  <!--Link to the CSS folder to make the page visually look good-->
+  <link rel="stylesheet" type="text/css" href="home.css">
+  <!-- <ul> tag is used to occupy the horizontal spaces, in this case we used it to adjust the position of the University name -->
+  <ul>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <!--Styling the university name-->
+    <li><a style="font-size: xx-large; padding: 14px 16px;display: block;
       color: white;
       text-align: center;
       font-weight:bold;
       padding: -20px 293px;
       text-decoration: none;">Northwest Missouri State University</a></li>
-</ul>
-  <img style = " position: relative;
+  </ul>
+  <!-- Setting the logo to the top left corner of the page-->
+  <img style=" position: relative;
   border-radius: 4px;
   padding: 5px;
   width: 150px; top: -64px;
   right: 35px; left: 25px " id="imagehtml" src="img/northwestlogo.png" alt="">
- </head>
-    <body>
-        <div id="searchform" >
+</head>
 
-        <h1 class = "text"> Hi Bearcats, Find your brick here!!!</h1>
-        <p class= "donor"> Enter donor name or Inscription : </p>
-        <form onreset="clearForm(form)">
-          <b><input name="Locate" id="search" type="text" placeholder=" Enter Name or Inscription" size="30"></b> 
-    <br/>
-    <br/>
-      <button type="button" class="btn"  value="submit" onClick="populateResults()">Search</button>
-    <button type="Reset" class="btn">Reset</button>
-  </form>
-</div>
- <div id="results" >
-</div>
- <div id="output">
-   <h>
-   <img src="" alt="" id="outputImage">
- </div>
- 
- <div id="brick">
- </div>
+<body>
+  <!-- div that has the headings and all the labels with search box to find the results on a page-->
+  <div id="searchform">
 
- <script>
-  function clearForm(form) {
+    <h1 class="text"> Hi Bearcats, Find your brick here!!!</h1>
+    <p class="donor"> Enter donor name or Inscription : </p>
+    <form onreset="clearForm(form)">
+      <b><input name="Locate" id="search" type="text" placeholder=" Enter Name or Inscription" size="30"></b>
+      <br />
+      <br />
+      <button type="button" class="btn" value="submit" onClick="populateResults()">Search</button>
+      <button type="Reset" class="btn">Reset</button>
+    </form>
+  </div>
+  <!-- div to print the search results on the page-->
+  <div id="results">
+  </div>
+  <!-- div to print the map image on the page-->
+  <div id="output">
+    <h>
+      <img src="" alt="" id="outputImage">
+  </div>
+  <!-- div to print the brick with inscription on it-->
+  <div id="brick">
+  </div>
+  <!-- Script to clear the page when donor clicks on the reset button-->
+  <script>
+    function clearForm(form) {
       document.body.innerHTML = "";
       var $f = $(form);
       var $f = $f.find(':input').not(':button, :submit, :reset, :hidden');
-      $f.val('').attr('value','').removeAttr('checked').removeAttr('selected');
-  }
+      $f.val('').attr('value', '').removeAttr('checked').removeAttr('selected');
+    }
 
- </script>
+  </script>
+
+  <!--Button to print the map and inscription on a page -->
+  <button id="print" onclick="window.print();"> Print
+  </button>
 
 
-<button id= "print" onclick="window.print();"> Print
-</button>
+</body>
 
-
- </body>
 </html>

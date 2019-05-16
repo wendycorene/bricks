@@ -10,6 +10,9 @@
 ### GitHub Page
 https://wendycorene.github.io/bricks/
 
+### Documentation for GDP 2
+https://docs.google.com/document/d/1m6MwWioQHLckDP8aZ7t0PKbAJzM7aXdH_TWOXy8niW8/edit?usp=sharing
+
 ### Group members
 Priyanka Bonam - Documentation Manager  
 Wendy Eloe - Repo Manager  
