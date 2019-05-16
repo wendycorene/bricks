@@ -1,5 +1,4 @@
-
-body{
+body {
 
   background-image: url("img//capture.png");
   /* filter : blur(3px);
@@ -13,20 +12,21 @@ body{
 }
 
 .text {
-position: relative;
-text-align: center;
-font-size: 40px;
-font-weight: 400;
-color: #f5f5f5;
-text-shadow: 1px 1px 1px #000000,
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 1px #000000,
     2px 1px 2px #000000,
     1px 2px 1px #000000,
     1px 3px 1px #000000;
-text-transform: uppercase;
-font-family: verdana;
+  text-transform: uppercase;
+  font-family: verdana;
 
 }
-    ul {
+
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -34,19 +34,20 @@ font-family: verdana;
   background-color: #006747;
   height: 70px;
 }
-.donor{
-  color:black;
+
+.donor {
+  color: black;
   font-size: 18px;
-  font-weight:bold;
+  font-weight: bold;
   /*font-family:Arial, Helvetica, sans-serif;*/
   color: #f5f5f5;
   text-shadow: 1px 1px 1px #000000,
     2px 1px 2px #000000,
     1px 2px 1px #000000,
     1px 3px 1px #000000;
-text-transform: uppercase;
-font-family: verdana;
- }
+  text-transform: uppercase;
+  font-family: verdana;
+}
 
 li {
   float: right;
@@ -59,35 +60,52 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
-a{
+
+a {
   text-align: center;
 }
-li a:hover {
-  color:white;
-}
-  b{
-   color:black;
-   font-size: 18px;
-   font-weight:bold;
-   text-shadow: 1px 1px white;
 
-  }
-  #results {
-    padding: 10px;
-  }
-#results tr:hover {background-color: rgb(97, 150, 172);}
-#results tr:nth-child(odd){background-color: #006747;}
-#results tr:nth-child(even){background-color:rgb(161, 157, 131);}/* #8D8741  rgb(97, 150, 172)*/
+li a:hover {
+  color: white;
+}
+
+b {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 1px 1px white;
+
+}
+
+#results {
+  padding: 10px;
+}
+
+#results tr:hover {
+  background-color: rgb(97, 150, 172);
+}
+
+#results tr:nth-child(odd) {
+  background-color: #006747;
+}
+
+#results tr:nth-child(even) {
+  background-color: rgb(161, 157, 131);
+}
+
+/* #8D8741  rgb(97, 150, 172)*/
 #results th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color:#006747;
+  background-color: #006747;
 
   color: white;
 }
+
 button {
-  background-color:rgb(115, 168, 97); /* Green */
+  background-color: rgb(115, 168, 97);
+  /* Green */
   border: none;
   color: white;
   padding: 10px 25px;
@@ -97,12 +115,13 @@ button {
   font-size: 17px;
   margin: 2px 1px;
   cursor: pointer;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 #print {
 
-  background-color:rgb(115, 168, 97); /* Green */
+  background-color: rgb(115, 168, 97);
+  /* Green */
   border: none;
   position: absolute;
   right: 0;
@@ -115,66 +134,75 @@ button {
   font-size: 17px;
   margin: 2px 1px;
   cursor: pointer;
-  font-weight:bold;
+  font-weight: bold;
 }
-#results div{
+
+#results div {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
   margin-top: 100px;
   padding-top: 50px;
   background: rgba(0, 151, 19, 0.6)
-
 }
-h1{
+
+h1 {
   color: white;
 }
-input#search{
-  background-color:#f5f5f5;
-  color:black;
+
+input#search {
+  background-color: #f5f5f5;
+  color: black;
 }
+
 /* setting the table size and border*/
 table {
   border-collapse: collapse;
   width: 100%;
 }
-tr,td,table{
+
+tr,
+td,
+table {
   border: 1px solid black;
   padding: 10px;
-  
+
 }
 
-table, th, td{
+table,
+th,
+td {
 
-  color:#f5f5f5;
+  color: #f5f5f5;
   /* border: 2px solid rgb(18, 19, 18); */
   font-family: verdana;
   font-size: 14px;
- }
+}
 
-#output{
+#output {
   margin-left: 25px;
- margin-right: auto;
- margin-top: 100px;
- padding-top: 25px;
+  margin-right: auto;
+  margin-top: 100px;
+  padding-top: 25px;
 
 }
+
 #brick {
-background-image: url("img/blankPaverEdited.jpg");
-height: 260px;
-width: 300px;
-margin-left: auto;
-margin-right: auto;
-font-size: 30px;
-color: white;
-text-align: center;
-display: none;
-margin-top: 50px;
+  background-image: url("img/blankPaverEdited.jpg");
+  height: 260px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  display: none;
+  margin-top: 50px;
 }
 
-#searchform{
- padding: 10px;
- text-align: center;
+#searchform {
+  padding: 10px;
+  text-align: center;
 }
 
 
@@ -191,26 +219,34 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-tr,td,table{
+
+tr,
+td,
+table {
   border: 1px solid black;
   padding: 10px;
-  
+
 }
+
 /* Functionality to print the map and inscription on a page*/
-@media print{
+@media print {
   body * {
-  visibility: hidden;
+    visibility: hidden;
   }
-  #brick, #output * {
+
+  #brick,
+  #output * {
     visibility: visible;
   }
+
   #output {
-  position: absolute;
-  top:0px;
+    position: absolute;
+    top: 0px;
   }
+
   #brick {
-  position: absolute;
-  top:  270;
-  right:200;
+    position: absolute;
+    top: 270;
+    right: 200;
   }
-  }
+}
