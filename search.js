@@ -51,7 +51,7 @@ function populateResults() {
       if (toCheck.includes(searchword[i])&& bricksJSON[x].Personalization!=word1)
       {
        word1=bricksJSON[x].Personalization;
-        var node = document.createElement("p");
+       var node = document.createElement("p");
       node.textContent=table;
       node.appendChild(table);
         {       
