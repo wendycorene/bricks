@@ -12,21 +12,12 @@ body {
 }
 
 .text {
-<<<<<<< HEAD
-  position: relative;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 400;
-  color: #f5f5f5;
-  text-shadow: 1px 1px 1px #000000,
-=======
 position: relative;
 text-align: center;
 font-size: 40px;
 font-weight: 500;
 color: #f5f5f5;
 text-shadow: 1px 1px 1px #000000,
->>>>>>> b6955a115af05518c0b3eee0f5c3326353d7fbc9
     2px 1px 2px #000000,
     1px 2px 1px #000000,
     1px 3px 1px #000000;
@@ -43,35 +34,21 @@ ul {
   background-color: #006747;
   height: 70px;
 }
-<<<<<<< HEAD
-
-.donor {
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-=======
 .donor{
-  color:black;
+  
   font-size: 25px;
   font-weight:800;
->>>>>>> b6955a115af05518c0b3eee0f5c3326353d7fbc9
   /*font-family:Arial, Helvetica, sans-serif;*/
   color: #f5f5f5;
   text-shadow: 1px 1px 1px #000000,
     2px 1px 2px #000000,
     1px 2px 1px #000000,
     1px 3px 1px #000000;
-<<<<<<< HEAD
-  text-transform: uppercase;
-  font-family: verdana;
-}
-=======
 text-transform: uppercase;
 font-family: verdana;
 font-weight: bold; 
 
  }
->>>>>>> b6955a115af05518c0b3eee0f5c3326353d7fbc9
 
 li {
   float: right;
