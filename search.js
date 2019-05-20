@@ -1,3 +1,4 @@
+var allDonars = false;
 function populateResults() {
   var x = document.getElementById("results");
   if (x.style.display == "none") {
@@ -8,9 +9,9 @@ function populateResults() {
   document.getElementById("results").innerHTML = "";
   var val = document.getElementById("search").value.toLowerCase();
   var res=val.slice(-1);
-  if(res!=0)
+  if(res!=0 || allDonors)
   {
-  if(val!= ""){
+  if(val!= "" || allDonors){
     var counter = 1;
 
     var table = document.createElement('table');
@@ -48,7 +49,7 @@ function populateResults() {
       var searchword=val.split(" ");
       for(i=0; i<searchword.length; i++)
       {
-      if (toCheck.includes(searchword[i])&& bricksJSON[x].Personalization!=word1)
+      if ((toCheck.includes(searchword[i])&& bricksJSON[x].Personalization!=word1)|| allDonors)
       {
         console.log(word1);
        word1=bricksJSON[x].Personalization;
@@ -97,7 +98,7 @@ function populateResults() {
       var descriptioncheck = bricksJSON[x].Personalization.toLowerCase();
       var doname=bricksJSON[x].DonorName.toLowerCase();
       if (descriptioncheck.includes(val)){
-       if(!doname.includes(val)){
+       if(!doname.includes(val) || allDonors){
         var tr = document.createElement('tr');
         var td1 = document.createElement('td');
         var td2 = document.createElement('td');
@@ -132,7 +133,7 @@ function populateResults() {
     {
         var toCheck = paversJSON[x].DonorName.toLowerCase();
         var doname=paversJSON[x].DonorName.toLowerCase();
-        if (toCheck.includes(val))
+        if (toCheck.includes(val) || allDonors)
         {
           //  if(!doname.includes(val))
           {
@@ -169,7 +170,7 @@ function populateResults() {
         var doname=paversJSON[x].DonorName.toLowerCase();
         if (PersonalizationCheck.includes(val))
         {
-          if(!doname.includes(val))
+          if(!doname.includes(val) || allDonors)
           {
           var tr = document.createElement('tr');
           var td1 = document.createElement('td');
@@ -205,4 +206,12 @@ function populateResults() {
     var count = document.createTextNode("Total "+paverscounter+" results found for word  "+val);
     x.appendChild(count);
     document.getElementById("results").appendChild(x);
-  } }}
+  }
+ }}
+
+  function DonorsList(){
+    console.log("donors list");
+    allDonors = true;
+    populateResults();
+    
+  }
