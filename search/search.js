@@ -1,21 +1,27 @@
 function populateResults() {
     document.getElementById("results").innerHTML = "";
+    // Convert the search result to lower case
   var val = document.getElementById("search").value.toLowerCase();
   var res=val.slice(-1);
   if(res!=0)
   {
   if(val != ""){
+    // set counter to 1
     var counter = 1;
+    // create table
     var table = document.createElement('table');
+    // Setting attributes rows of table where the results are extracted from xcel file in columns
     var tr = document.createElement('tr');   
     var td1 = document.createElement('th');
     var td2 = document.createElement('th');
     var td3 = document.createElement('th');
     var td4 = document.createElement('th');
+    // Setting rows of the tables header
     var text0 = document.createTextNode('S.No');
     var text1 = document.createTextNode('Donor Name');
     var text2 = document.createTextNode( 'Personalization');
     var text3 = document.createTextNode( 'Zone');
+    // retriving data and assigning to variables
     td1.appendChild(text0);
     td2.appendChild(text1);
     td3.appendChild(text2);
@@ -24,12 +30,14 @@ function populateResults() {
     tr.appendChild(td2);
     tr.appendChild(td3);
     tr.appendChild(td4);
+    
     table.appendChild(tr);
       var node = document.createElement("p");  
       node.appendChild(table);             
       document.getElementById("results").appendChild(node); 
   for (var x in bricksJSON)
     {
+      // Convert the search result to lower case
       var toCheck = bricksJSON[x].DonorName.toLowerCase(); 
         if (toCheck.includes(val))
       {
@@ -64,7 +72,7 @@ function populateResults() {
     }
       for (var x in bricksJSON)
     {
-
+// Convert the search result to lower case
       var descriptioncheck = bricksJSON[x].Personalization.toLowerCase();         
       if (descriptioncheck.includes(val)){
         var tr = document.createElement('tr');   
@@ -97,6 +105,7 @@ function populateResults() {
     }
     for (x in paversJSON)
     {
+      // Convert the search result to lower case
         var toCheck = paversJSON[x].DonorName.toLowerCase();
         if (toCheck.includes(val))
         {
