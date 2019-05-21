@@ -1,23 +1,20 @@
+/* setting the background image*/
 body {
-
   background-image: url("img//hughes fieldhouse fall2018 tw 00080.jpg");
-  /* filter : blur(3px);
-  -webkit-filter: blur(3px); */
-  /* opacity: 0.5; */
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
 }
-
+/* To set the size and test color for the heading on the main page*/
 .text {
-position: relative;
-text-align: center;
-font-size: 30px;
-font-weight: 500;
-color: #f5f5f5;
-text-shadow: 1px 1px 1px #000000,
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 1px #000000,
     2px 1px 2px #000000,
     1px 2px 1px #000000,
     1px 3px 1px #000000;
@@ -25,7 +22,7 @@ text-shadow: 1px 1px 1px #000000,
   font-family: verdana;
 
 }
-
+/* set to adjust the University Name horizontally and to style it*/
 ul {
   list-style-type: none;
   margin: 0;
@@ -34,21 +31,21 @@ ul {
   background-color: #006747;
   height: 70px;
 }
-.donor{
-  
+/*class to set the font family and the text color*/
+.donor {
+
   font-size: 25px;
-  font-weight:800;
-  /*font-family:Arial, Helvetica, sans-serif;*/
+  font-weight: 800;
   color: #f5f5f5;
   text-shadow: 1px 1px 1px #000000,
     2px 1px 2px #000000,
     1px 2px 1px #000000,
     1px 3px 1px #000000;
-text-transform: uppercase;
-font-family: verdana;
-font-weight: bold; 
+  text-transform: uppercase;
+  font-family: verdana;
+  font-weight: bold;
 
- }
+}
 
 li {
   float: right;
@@ -69,7 +66,7 @@ a {
 li a:hover {
   color: white;
 }
-
+/* styling the place holder*/
 b {
   color: black;
   font-size: 18px;
@@ -81,20 +78,19 @@ b {
 #results {
   padding: 10px;
 }
-
+/* setting different colors when the donor hovers on different cells of the table*/
 #results tr:hover {
   background-color: rgb(97, 150, 172);
 }
-
+/* setting the background color for odd table cells*/
 #results tr:nth-child(odd) {
   background-color: #006747;
 }
-
+/* setting the background color for even table cells*/
 #results tr:nth-child(even) {
   background-color: rgb(161, 157, 131);
 }
-
-/* #8D8741  rgb(97, 150, 172)*/
+/* setting the background color for table head*/
 #results th {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -103,7 +99,7 @@ b {
 
   color: white;
 }
-
+/* styling the search, donor list and reset button*/
 button {
   background-color: rgb(115, 168, 97);
   /* Green */
@@ -118,11 +114,9 @@ button {
   cursor: pointer;
   font-weight: bold;
 }
-
+/* styling the print button*/
 #print {
-
   background-color: rgb(115, 168, 97);
-  /* Green */
   border: none;
   position: absolute;
   right: 0;
@@ -146,11 +140,11 @@ button {
   padding-top: 50px;
   background: rgba(0, 151, 19, 0.6)
 }
-
+/* Page heading*/
 h1 {
   color: white;
 }
-
+/* Setting the color of the text for the text entered in the search label*/
 input#search {
   background-color: #f5f5f5;
   color: black;
@@ -162,18 +156,13 @@ table {
   width: 100%;
 }
 
-tr,
-td,
-table {
+tr, td, table {
   border: 1px solid black;
   padding: 10px;
 
 }
-
-table,
-th,
-td {
-
+/* setting font format in the table*/
+table, th, td {
   color: #f5f5f5;
   /* border: 2px solid rgb(18, 19, 18); */
   font-family: verdana;
@@ -187,7 +176,7 @@ td {
   padding-top: 25px;
 
 }
-
+/* Setting the background image on the map page to print the inscription on it*/
 #brick {
   background-image: url("img/blankPaverEdited.jpg");
   height: 260px;
@@ -200,7 +189,7 @@ td {
   display: none;
   margin-top: 50px;
 }
-
+/* style the contents of the page before obtaining the results*/
 #searchform {
   padding: 10px;
   text-align: center;
