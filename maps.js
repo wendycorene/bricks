@@ -8,7 +8,7 @@ function showImage() {
   else {
     x.style.display = "none";
   }
-  var str = event.target.parentElement.childNodes[1].innerHTML.replace(/\s/g, "").concat(".jpg");
+  var str = event.target.parentElement.childNodes[2].innerHTML.replace(/\s/g, "").concat(".jpg");
   var imgSource = document.getElementById("outputImage");
   imgSource.setAttribute("width", 1000, "margin-left", 1000, "border-width", 100);
   imgSource.setAttribute("src", "img/Maps/" + str);
