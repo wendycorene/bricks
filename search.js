@@ -1,4 +1,4 @@
-var allDonars = false;
+
 function populateResults() {
   var x = document.getElementById("results");
   if (x.style.display == "none") {
@@ -49,7 +49,7 @@ function populateResults() {
       var searchword=val.split(" ");
       for(i=0; i<searchword.length; i++)
       {
-      if ((toCheck.includes(searchword[i])&& bricksJSON[x].Personalization!=word1)|| allDonors)
+      if ((toCheck.includes(searchword[i])&& bricksJSON[x].Personalization!=word1))
       {
         console.log(word1);
        word1=bricksJSON[x].Personalization;
@@ -209,9 +209,3 @@ function populateResults() {
   }
  }}
 
-  function DonorsList(){
-    console.log("donors list");
-    allDonors = true;
-    populateResults();
-    
-  }
