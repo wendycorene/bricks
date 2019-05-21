@@ -6,7 +6,8 @@ function populateResults() {
     x.style.display = "none";
   }
   document.getElementById("results").innerHTML = "";
-  var val = document.getElementById("search").value.toLowerCase();
+  var val = document.getElementById("search").value.toLowerCase().replace("&", "");
+  console.log(val.replace("&", ""));
   var res=val.slice(-1);
   if(res!=0)
   {
@@ -15,49 +16,34 @@ function populateResults() {
 
     var table = document.createElement('table');
     var tr = document.createElement('tr');
-    var td1 = document.createElement('th');
     var td2 = document.createElement('th');
     var td3 = document.createElement('th');
     var td4 = document.createElement('th');
-    var text0 = document.createTextNode('S.No');
     var text1 = document.createTextNode('Donor Name');
     var text2 = document.createTextNode( 'Personalization');
     var text3 = document.createTextNode( 'Zone');
-
-    td1.appendChild(text0);
     td2.appendChild(text1);
     td3.appendChild(text2);
     td4.appendChild(text3);
-
-    tr.appendChild(td1);
     tr.appendChild(td2);
     tr.appendChild(td3);
     tr.appendChild(td4);
-
-
     table.appendChild(tr);
-
-
 
   for (var x in bricksJSON)
     {
-      console.log(bricksJSON[x]);
       var toCheck = bricksJSON[x].DonorName.toLowerCase();
       var doname=bricksJSON[x].DonorName.toLowerCase();
       var word1="null";
-      console.log(val);
       var searchword=val.split(" ");
       for(i=0; i<searchword.length; i++)
       {
       if (toCheck.includes(searchword[i])&& bricksJSON[x].Personalization!=word1)
       {
        word1=bricksJSON[x].Personalization;
-       var node = document.createElement("p");
-      node.textContent=table;
-      node.appendChild(table);
+
         {       
     var tr = document.createElement('tr');
-    var td1 = document.createElement('td');
     var td2 = document.createElement('td');
     var td3 = document.createElement('td');
     var td4 = document.createElement('td');
@@ -67,12 +53,11 @@ function populateResults() {
     var text3 = document.createTextNode( bricksJSON[x].Zone);
     var text0 = document.createTextNode( counter);
     var link = document.createTextNode( bricksJSON[x].DonorName);
-    td1.appendChild(text0);
     td2.appendChild(text1);
     td3.appendChild(text2);
     td4.appendChild(text3);
    
-    tr.appendChild(td1);
+
     tr.appendChild(td2);
     tr.appendChild(td3);
     tr.appendChild(td4);
@@ -100,24 +85,22 @@ function populateResults() {
       var searchword=val.split(" ");
       for(i=0; i<searchword.length; i++)
       {
+     
       if (descriptioncheck.includes(searchword[i])&& bricksJSON[x].Personalization!=word1)
       {
         word1=bricksJSON[x].Personalization;
-       if(!doname.includes(val)){
+        if(!doname.includes(searchword[i]))
+        {
         var tr = document.createElement('tr');
-        var td1 = document.createElement('td');
         var td2 = document.createElement('td');
         var td3 = document.createElement('td');
         var td4 = document.createElement('td');
-        var text0 = document.createTextNode( brickscount1);
         var text1 = document.createTextNode( bricksJSON[x].DonorName);
         var text2 = document.createTextNode( bricksJSON[x].Personalization);
         var text3 = document.createTextNode( bricksJSON[x].Zone);
-        td1.appendChild(text0);
         td2.appendChild(text1);
         td3.appendChild(text2);
         td4.appendChild(text3);
-        tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
         tr.appendChild(td4);
@@ -136,24 +119,24 @@ function populateResults() {
     {
         var toCheck = paversJSON[x].DonorName.toLowerCase();
         var doname=paversJSON[x].DonorName.toLowerCase();
-        if (toCheck.includes(val))
+        var word1="null";
+        var searchword=val.split(" ");
+        for(i=0; i<searchword.length; i++)
         {
-          //  if(!doname.includes(val))
-          {
+        if (toCheck.includes(searchword[i])&& paversJSON[x].Personalization!=word1)
+        {
+         word1=paversJSON[x].Personalization;
          var tr = document.createElement('tr');
-          var td1 = document.createElement('td');
           var td2 = document.createElement('td');
           var td3 = document.createElement('td');
           var td4 = document.createElement('td');
-          var text0 = document.createTextNode( paverscount);
+     
           var text1 = document.createTextNode( paversJSON[x].DonorName);
           var text2 = document.createTextNode( paversJSON[x].Personalization);
           var text3 = document.createTextNode( paversJSON[x].Zone);
-          td1.appendChild(text0);
           td2.appendChild(text1);
           td3.appendChild(text2);
           td4.appendChild(text3);
-          tr.appendChild(td1);
           tr.appendChild(td2);
           tr.appendChild(td3);
           tr.appendChild(td4);
@@ -171,24 +154,26 @@ function populateResults() {
     {
         var PersonalizationCheck = paversJSON[x].Personalization.toLowerCase();
         var doname=paversJSON[x].DonorName.toLowerCase();
-        if (PersonalizationCheck.includes(val))
+        var word1="null";
+        var searchword=val.split(" ");
+        for(i=0; i<searchword.length; i++)
         {
-          if(!doname.includes(val))
+       
+        if (PersonalizationCheck.includes(searchword[i])&& paversJSON[x].Personalization!=word1)
+        {
+          word1=paversJSON[x].Personalization;
+          if(!doname.includes(searchword[i]))
           {
           var tr = document.createElement('tr');
-          var td1 = document.createElement('td');
           var td2 = document.createElement('td');
           var td3 = document.createElement('td');
           var td4 = document.createElement('td');
-          var text0 = document.createTextNode( Personalizationpaverscount);
           var text1 = document.createTextNode( paversJSON[x].DonorName);
           var text2 = document.createTextNode( paversJSON[x].Personalization);
           var text3 = document.createTextNode( paversJSON[x].Zone);
-          td1.appendChild(text0);
           td2.appendChild(text1);
           td3.appendChild(text2);
           td4.appendChild(text3);
-          tr.appendChild(td1);
           tr.appendChild(td2);
           tr.appendChild(td3);
           tr.appendChild(td4);
@@ -202,7 +187,7 @@ function populateResults() {
         node.appendChild(table);
         document.getElementById("results").appendChild(node);
         Personalizationpaverscount++;
-      }}
+      }}}
     }
      var paverscounter=Personalizationpaverscount-1;
      var x = document.createElement("H1");

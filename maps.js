@@ -8,14 +8,14 @@ function showImage() {
   else {
     x.style.display = "none";
   }
-  var str = event.target.parentElement.childNodes[3].innerHTML.replace(/\s/g, "").concat(".jpg");
+  var str = event.target.parentElement.childNodes[2].innerHTML.replace(/\s/g, "").concat(".jpg");
   var imgSource = document.getElementById("outputImage");
   imgSource.setAttribute("width", 1000, "margin-left", 1000, "border-width", 100);
   imgSource.setAttribute("src", "img/Maps/" + str);
 
   // storing the the personalization in variable "p" when donor clicks on the result
-  var p = event.target.parentElement.childNodes[2].innerHTML;
-  var nameOnBrick = event.target.parentElement.childNodes[2].innerText.split("<td>").join("").split("\n").join("<br>");
+  var p = event.target.parentElement.childNodes[1].innerHTML;
+  var nameOnBrick = event.target.parentElement.childNodes[1].innerText.split("<td>").join("").split("\n").join("<br>");
   document.getElementById("brick").innerHTML = nameOnBrick;
   document.getElementById("brick").style.display = "block";
 
