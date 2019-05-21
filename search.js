@@ -6,8 +6,8 @@ function populateResults() {
     x.style.display = "none";
   }
   document.getElementById("results").innerHTML = "";
-  var val = document.getElementById("search").value.toLowerCase().replace("&", "");
-  console.log(val.replace("&", ""));
+  var val = document.getElementById("search").value.toLowerCase().replace(/\&/g, "");
+  console.log(val.replace(/\&/g, ""));
   var res=val.slice(-1);
   if(res!=0)
   {
