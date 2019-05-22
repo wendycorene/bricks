@@ -197,7 +197,7 @@ table, th, td {
 
 
 /* Clear floats after the columns */
-.row:after {
+.row:aftr {
   content: "";
   display: table;
   clear: both;
