@@ -64,6 +64,18 @@
       <button type="Reset" class="btn">Reset</button>
       <button type="button" class="btn" onclick="allDonors=true;populateResults()">Donors List</button>
     </form>
+
+  <!-- Script to navigate to the master map on clicking the button-->
+  <!--  <script type="text/javascript">
+      function addimage() {
+        document.write('<img src="img/Maps/masterMap.jpg" height=70% width=70% top=270 right=200>')
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="addimage();">Map</button>
+  </body> -->
+
   </div>
   <!-- div to print the search results on the page-->
   <div id="results">
@@ -90,6 +102,14 @@
   <!--Button to print the map and inscription on a page -->
   <button id="print" onclick="window.print();"> Print
   </button>
+  <button onclick="myFunction()">Want a Brick</button>
+
+<script>
+function myFunction() {
+  location.replace("https://www.nwmissouri.edu/HughesFieldhouse/donate.htm")
+}
+</script>
+
 
 
 </body>
