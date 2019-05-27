@@ -1,3 +1,4 @@
+    
 function populateResults() 
 {
   var x = document.getElementById("results");
@@ -9,7 +10,8 @@ function populateResults()
     x.style.display = "none";
   }
   document.getElementById("results").innerHTML = "";
-  var val = document.getElementById("search").value.toLowerCase().trim();
+  var val = document.getElementById("search").value.toLowerCase();
+  // console.log(val.replace(/[^\w\s]/gi, "").trim());
   var res = val.slice(-1);
   if (res != 0) 
   {
@@ -48,11 +50,13 @@ function populateResults()
             if (toCheck.includes(searchword[i].trim()) && bricksJSON[x].Personalization != word1)
              {
               word1 = bricksJSON[x].Personalization;
+
               {
                 var tr = document.createElement('tr');
                 var td2 = document.createElement('td');
                 var td3 = document.createElement('td');
                 var td4 = document.createElement('td');
+
                 var text1 = document.createTextNode(bricksJSON[x].DonorName);
                 var text2 = document.createTextNode(bricksJSON[x].Personalization);
                 var text3 = document.createTextNode(bricksJSON[x].Zone);
@@ -61,11 +65,16 @@ function populateResults()
                 td2.appendChild(text1);
                 td3.appendChild(text2);
                 td4.appendChild(text3);
+
+
                 tr.appendChild(td2);
                 tr.appendChild(td3);
                 tr.appendChild(td4);
+
                 var w = text3.textContent.replace(" ", "") + "," + text2.textContent.replace(/\n|\r/g, "").replace(/\"/g, " ");
+
                 tr.setAttribute("onclick", 'showImage(\"' + w + '")');
+
                 table.appendChild(tr);
                 var node = document.createElement("p");
                 node.appendChild(table);
@@ -206,7 +215,7 @@ function populateResults()
         }
         var paverscounter = Personalizationpaverscount - 1;
         var x = document.createElement("H1");
-        var count = document.createTextNode("Total " + paverscounter + " results found for  " + val);
+        var count = document.createTextNode("Total " + paverscounter + " results found for word  " + val);
         x.appendChild(count);
         document.getElementById("results").appendChild(x);
       } }}
