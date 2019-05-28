@@ -27,8 +27,11 @@ function showImage() {
       console.log(p);
       document.getElementById("brick").innerHTML = "<br/>";
       document.getElementById("brick").innerHTML = bricksJSON[x].Line1 + "<br />";
-      document.getElementById("brick").innerHTML += bricksJSON[x].Line2 + "<br />";
-      
+      if (typeof bricksJSON[x].Line3 !== "undefined") {
+        document.getElementById("brick").innerHTML += bricksJSON[x].Line2 + "<br />";
+      }
+     
+  
       if (typeof bricksJSON[x].Line3 !== "undefined") {
         document.getElementById("brick").innerHTML += bricksJSON[x].Line3 + "<br />";
       }
