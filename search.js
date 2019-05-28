@@ -6,16 +6,15 @@ function populateResults() {
     x.style.display = "none";
   }
   document.getElementById("results").innerHTML = "";
-
   var val = document.getElementById("search").value.toLowerCase().trim();
   var res = val.slice(-1);
+  var lengt=val.length;
   if (res != 0) {
-    if (val != "") {
+    if (val != "" && lengt!=1) {
       var counter = 1;
       var pcounter = 1;
       var dpcounter = 1;
       var ppcounter = 1;
-
       var table = document.createElement('table');
       var tr = document.createElement('tr');
       var td2 = document.createElement('th');
