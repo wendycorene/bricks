@@ -27,7 +27,7 @@ function showImage() {
       console.log(p);
       document.getElementById("brick").innerHTML = "<br/>";
       document.getElementById("brick").innerHTML = bricksJSON[x].Line1 + "<br />";
-      if (typeof bricksJSON[x].Line3 !== "undefined") {
+      if (typeof bricksJSON[x].Line2 !== "undefined") {
         document.getElementById("brick").innerHTML += bricksJSON[x].Line2 + "<br />";
       }
      
