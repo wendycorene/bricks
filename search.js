@@ -10,7 +10,7 @@ function populateResults() {
   var res = val.slice(-1);
   var lengt=val.length;
   if (res != 0) {
-    if (val != "" && lengt!=1) {
+    if (val != "" && lengt>1) {
       var counter = 1;
       var pcounter = 1;
       var dpcounter = 1;
