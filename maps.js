@@ -49,7 +49,7 @@ function showImage() {
       document.getElementById("brick").innerHTML = "\n";
       document.getElementById("brick").innerHTML = paversJSON[x].Line1 + "<br />";
       document.getElementById("brick").innerHTML += paversJSON[x].Line2 + "<br />";
-      document.getElementById("brick").innerHTML += paversJSON[x].Line3 + "<br />";
+      // document.getElementById("brick").innerHTML += paversJSON[x].Line3 + "<br />";
       console.log(paversJSON[x].Line5);
       console.log(typeof paversJSON[x].Line5);
       console.log(typeof "undefined");
@@ -57,7 +57,10 @@ function showImage() {
 
   // Generally personalization is of 6 lines and the donor's personalization may not be 6 six lines it can be of 2 0r 3 lines also
   // if condition to leave the brick blank if the personalization is not of six lines 
-      if (typeof paversJSON[x].Line4 !== "undefined") {
+  if (typeof paversJSON[x].Line3 !== "undefined") {
+    document.getElementById("brick").innerHTML += paversJSON[x].Line3 + "<br />";
+  }    
+  if (typeof paversJSON[x].Line4 !== "undefined") {
         document.getElementById("brick").innerHTML += paversJSON[x].Line4 + "<br />";
       }
       if (typeof paversJSON[x].Line5 !== "undefined") {
