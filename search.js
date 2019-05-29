@@ -1,3 +1,4 @@
+// Methord help in searching the json data for desirble results
 function populateResults() {
   var x = document.getElementById("results");
   if (x.style.display == "none") {
