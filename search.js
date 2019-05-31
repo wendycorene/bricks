@@ -1,4 +1,5 @@
 // Methord help in searching the json data for desirble results
+// designed by Priyanka Bonam
 function populateResults() {
   var x = document.getElementById("results");
   if (x.style.display == "none") {
@@ -10,7 +11,16 @@ function populateResults() {
   var val = document.getElementById("search").value.toLowerCase().trim();
   var res = val.slice(-1);
   var lengt=val.length;
+  if(lengt<=1)
+  {
+    var x = document.createElement("H1");
+    var count = document.createTextNode("Please enter atleast 2 characters to search");
+    x.appendChild(count);
+    document.getElementById("results").appendChild(x);
+
+  }
   if (res != 0) {
+   
     if (val != "" && lengt>1) {
       var counter = 1;
       var pcounter = 1;
@@ -91,6 +101,7 @@ function populateResults() {
           for (i = 0; i < searchword.length; i++) {
             if (!searchword[i].includes("&")) {
               if (toCheck.includes(searchword[i].trim()) && bricksJSON[x].Personalization != word1) {
+              
                 word1 = bricksJSON[x].Personalization;
                 var text1 = document.createTextNode(bricksJSON[x].DonorName);
                 var text2 = document.createTextNode(bricksJSON[x].Personalization);
@@ -157,6 +168,7 @@ function populateResults() {
         x.appendChild(count);
         document.getElementById("results").appendChild(x);
       }
+     
       function printmap() {
 
         var tr = document.createElement('tr');
