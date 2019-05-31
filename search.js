@@ -13,10 +13,10 @@ function populateResults() {
   var lengt=val.length;
   if(lengt<=1)
   {
-    var x = document.createElement("H1");
+    var y = document.createElement("H1");
     var count = document.createTextNode("Please enter atleast 2 characters to search");
-    x.appendChild(count);
-    document.getElementById("results").appendChild(x);
+    y.appendChild(count);
+    document.getElementById("results").appendChild(y);
 
   }
   if (res != 0) {
