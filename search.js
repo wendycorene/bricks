@@ -99,7 +99,7 @@ function populateResults() {
           var word1 = "null";
           var searchword = val.split(" ");
           for (i = 0; i < searchword.length; i++) {
-            if (!searchword[i].includes("&")) {
+            if (!searchword[i].includes("&")&&searchword[i].trim()!="") {
               if (toCheck.includes(searchword[i].trim()) && bricksJSON[x].Personalization != word1) {
               
                 word1 = bricksJSON[x].Personalization;
@@ -135,7 +135,7 @@ function populateResults() {
           var word1 = "null";
           var searchword = val.split(" ");
           for (i = 0; i < searchword.length; i++) {
-            if (!searchword[i].includes("&")) {
+            if (!searchword[i].includes("&")&&searchword[i].trim()!="") {
               if (toCheck.includes(searchword[i].trim()) && paversJSON[x].Personalization != word1) {
                 word1 = paversJSON[x].Personalization;
                 var text1 = document.createTextNode(paversJSON[x].DonorName);
