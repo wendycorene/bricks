@@ -61,8 +61,8 @@
       <b><input name="Locate" id="search" type="text" placeholder=" Enter Name or Inscription" size="30"></b>
       <br />
       <br />
-      <button type="button" class="btn" value="submit" onClick="populateResults()">Search</button>
-      <button type="Reset" class="btn">Reset</button>
+      <input type="button" class="btn" value="Search" onClick="populateResults()"> 
+           <button type="Reset" class="btn">Reset</button>
       <button type="button" class="btn" onclick="allDonors=true;displayAllDonors()">Donors List</button>
     </form>
 
@@ -79,7 +79,7 @@
 
   </div>
   <!-- div to print the search results on the page-->
-  <div id="results">
+  <div id="results" style="display:none;">
   </div>
   <!-- div to print the map image on the page-->
   <div id="output">

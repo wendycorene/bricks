@@ -4,8 +4,6 @@ function populateResults() {
   var x = document.getElementById("results");
   if (x.style.display == "none") {
     x.style.display = "block";
-  } else {
-    x.style.display = "none";
   }
   document.getElementById("results").innerHTML = "";
   var val = document.getElementById("search").value.toLowerCase().trim();
