@@ -97,19 +97,23 @@ b {
 
 }
 
-#results {
+#results 
+{
   padding: 10px;
 }
 /* setting different colors when the donor hovers on different cells of the table*/
-#results tr:hover {
+#results tr:hover 
+{
   background-color: rgb(97, 150, 172);
 }
 /* setting the background color for odd table cells*/
-#results tr:nth-child(odd) {
+#results tr:nth-child(odd) 
+{
   background-color: #006747;
 }
 /* setting the background color for even table cells*/
-#results tr:nth-child(even) {
+#results tr:nth-child(even) 
+{
   background-color: rgb(161, 157, 131);
 }
 /* setting the background color for table head*/
@@ -118,7 +122,6 @@ b {
   padding-bottom: 12px;
   text-align: left;
   background-color: #006747;
-
   color: white;
 }
 /* styling the search, donor list and reset button*/

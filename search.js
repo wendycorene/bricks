@@ -197,11 +197,6 @@ function displayAllDonors() {
   } else {
     x.style.display = "none";
   }
-  // document.getElementById("results").innerHTML = "";
-
-  // var val = document.getElementById("search").value.toLowerCase().trim();
-  // var res = val.slice(-1);
-
 
   var counter = 1;
   var pcounter = 1;
@@ -227,32 +222,22 @@ function displayAllDonors() {
   for (var x in bricksJSON) {
     var toCheck = bricksJSON[x].DonorName.toLowerCase();
     var descriptioncheck = bricksJSON[x].Personalization.toLowerCase();
-    // if (toCheck.includes(val)) {
     var text1 = document.createTextNode(bricksJSON[x].DonorName);
     var text2 = document.createTextNode(bricksJSON[x].Personalization);
     var text3 = document.createTextNode(bricksJSON[x].Zone);
-
     printmap();
     counter++;
-    // }
-
-
     var donorcount = counter;
   }
 
   for (var x in paversJSON) {
     var toCheck = paversJSON[x].DonorName.toLowerCase();
     var descriptioncheck = paversJSON[x].Personalization.toLowerCase();
-    // if (toCheck.includes(val)) {
     var text1 = document.createTextNode(paversJSON[x].DonorName);
     var text2 = document.createTextNode(paversJSON[x].Personalization);
     var text3 = document.createTextNode(paversJSON[x].Zone);
-
     printmap();
     pcounter++;
-    // }
-
-
     var pavercount = pcounter;
   }
 
@@ -260,7 +245,6 @@ function displayAllDonors() {
   for (var x in bricksJSON) {
     var toCheck = bricksJSON[x].DonorName.toLowerCase();
     var descriptioncheck = bricksJSON[x].Personalization.toLowerCase();
-    console.log(donorcount);
     if (donorcount === 1 && pavercount == 1) {
       var word1 = "null";
       word1 = bricksJSON[x].Personalization;
@@ -277,7 +261,6 @@ function displayAllDonors() {
   for (var x in paversJSON) {
     var toCheck = paversJSON[x].DonorName.toLowerCase();
     var descriptioncheck = paversJSON[x].Personalization.toLowerCase();
-    console.log(donorcount);
     if (donorcount === 1 && pavercount == 1) {
       var word1 = "null";
       word1 = paversJSON[x].Personalization;
@@ -290,9 +273,9 @@ function displayAllDonors() {
       var totalpavercount = ppcounter;
     }
   }
-  var x = document.createElement("H1");
+  var x = document.createElement("H2");
   if (totaldonorcount === 1 && totalpavercount === 1) {
-    var count = document.createTextNode("no results found for  " + val + ". Please check your search terms and try again. ");
+    var count = document.createTextNode("No results found for  " + val + ". Please check your search terms and try again. ");
     x.appendChild(count);
     document.getElementById("results").appendChild(x);
   }
