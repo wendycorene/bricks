@@ -22,6 +22,27 @@ body {
   font-family: verdana;
 
 }
+/* CSS to set the logo */
+#logo
+{
+  position: relative;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px; top: -64px;
+  right: 35px; left: 25px;
+  background-image: url( "img/northwestlogo.png");
+}
+/* CSS to set the title of the page */
+#title{
+  font-size: xx-large; 
+  padding: 14px 16px;
+  display: block;
+      color: white;
+      text-align: center;
+      font-weight:bold;
+      padding: -20px 293px;
+      text-decoration: none;
+}
 /* set to adjust the University Name horizontally and to style it*/
 ul {
   list-style-type: none;
@@ -63,7 +84,8 @@ a {
   text-align: center;
 }
 
-li a:hover {
+li a:hover 
+{
   color: white;
 }
 /* styling the place holder*/
@@ -100,7 +122,7 @@ b {
   color: white;
 }
 /* styling the search, donor list and reset button*/
-button {
+.btn {
   background-color: rgb(115, 168, 97);
   /* Green */
   border: none;
@@ -178,7 +200,7 @@ table, th, td {
 }
 /* Setting the background image on the map page to print the inscription on it*/
 #brick {
-  background-image: url("img/blankPaver.jpg");
+background-image: url("img/blankPaver.jpg");
 
 margin-left: 30px; 
 
@@ -194,13 +216,13 @@ margin-left: auto;
 
 margin-right: auto;
 
-line-height: 40px;
+line-height: 45px;
 
 font-family: "Century Gothic", "Helvetica", sans-serif;
 
 text-shadow:0 1px 0 #FFFFFF;
 
-font-size: 30px;
+font-size: 35px;
 
 font-weight: bold;
 

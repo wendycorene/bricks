@@ -1,23 +1,93 @@
-<!--File used for the quick access of the web page-->
-<!DOCTYPE html>
+<!-- Main Html file to display the cotent on the web page -->
 <html>
 
 <head>
-  <!--title of the page-->
-  <title>Brick Finder</title>
-  <meta http-equiv='refresh' content='0; URL=https://wendycorene.github.io/bricks/search.html'>
+  <!--Title of our page-->
+  <title>Donor Search</title>
+  <!--Use of bootstarp library to make the page responsive-->
+  <meta name="viewport" content="width = device-width, initial-scale= 1">
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <!--Link to the CSS folder to make the page visually look good
+  <link rel="stylesheet" href="home.css">-->
+  <script src="lib/jquery-3.1.1.min.js"></script>
+  <script src="lib/xlsx.full.min.js"></script>
+  <!--Link to the JavaScript files that are used to print the serach results, map and inscription on the brick-->
+  <script src="data.js"></script>
+  <script src="search.js"></script>
+  <script src="maps.js"></script>
+  <!--Link to the CSS folder to make the page visually look good-->
+  <link rel="stylesheet" type="text/css" href="home.css">
+  <!-- <ul> tag is used to occupy the horizontal spaces, in this case we used it to adjust the position of the University name -->
+  <ul>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <!--Styling the university name-->
+    <li><a id="title">
+        Northwest Missouri State University</a>
+    </li>
+  </ul>
+  <!-- Setting the logo to the top left corner of the page-->
+  <img id="logo" src="img/northwestlogo.png" alt="">
 </head>
 
 <body>
-
-  <h1>This is a page where you can find some bricks!</h1>
-  <p>All bricks are located in Zone 1: outside on the sidewalk.</p>
-  <!--Link to our main page-->
-  <a href="search.html">Here's the working prototype!</a>
-  <br>
-  <!--Link to the excel data-->
-  <a href="data/MultiSheetBrickData.xlsx">Here's some example data in multi-tabbed sheets</a>
+  <!-- div that has the headings and all the labels with search box to find the results on a page-->
+  <div id="searchform">
+    <!-- Main Heading inviting the Bearcats to wesite  -->
+    <h1 class="text"> FIND YOUR BRICK IN THE WALK OF CHAMPION!!!</h1>
+    <!-- The name and content needed to searh in the tab -->
+    <p class="donor"> Enter donor name or Inscription : </p>
+    <form onreset="clearForm(form)">
+      <b><input name="Locate" id="search" type="text" placeholder=" Enter Name or Inscription" size="30"></b>
+      <br />
+      <br />
+      <input type="button" class="btn" value="Search" onClick="populateResults()">
+      <button type="Reset" class="btn">Reset</button>
+      <button type="button" class="btn" onclick="allDonors=true;displayAllDonors()">Donors List</button>
+    </form>
+    <!-- Script to navigate to the master map on clicking the button-->
+  </div>
+  <!-- div to print the search results on the page-->
+  <div id="results" style="display:none;">
+  </div>
+  <!-- div to print the map image on the page-->
+  <div id="output">
+    <h>
+      <img src="" alt="" id="outputImage">
+  </div>
+  <!-- div to print the brick with inscription on it-->
+  <div id="brick">
+  </div>
+  <!-- Script to clear the page when donor clicks on the reset button-->
+  <script>
+    function clearForm(form) {
+      document.body.innerHTML = "";
+      var $f = $(form);
+      var $f = $f.find(':input').not(':button, :submit, :reset, :hidden');
+      $f.val('').attr('value', '').removeAttr('checked').removeAttr('selected');
+    }
+  </script>
+   <!-- Button for payment page which navigates to the new page -->
+   <input type="button" class="btn" value=" Want a Brick"
+   onclick="window.open('https://www.nwmissouri.edu/HughesFieldhouse/donate.htm')">
+   
+  <!--Button to print the map and inscription on a page -->
+  <button id="print" onclick="window.print();"> Print
+  </button>
+ 
 
 </body>
-
 </html>
