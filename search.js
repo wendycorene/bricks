@@ -1,4 +1,4 @@
-// Methord help in searching the json data for desirble results
+// Method help in searching the json data for desirble results
 // designed by Priyanka Bonam
 function populateResults() {
   var x = document.getElementById("results");
@@ -49,9 +49,7 @@ function populateResults() {
           console.log("in bricks don");
           printmap();
           counter++;
-        }
-
-        else if (descriptioncheck.includes(val)) {
+        } else if (descriptioncheck.includes(val)) {
           var text1 = document.createTextNode(bricksJSON[x].DonorName);
           var text2 = document.createTextNode(bricksJSON[x].Personalization);
           var text3 = document.createTextNode(bricksJSON[x].Zone);
@@ -73,9 +71,7 @@ function populateResults() {
           console.log("in pavers don");
           printmap();
           pcounter++;
-        }
-
-        else if (descriptioncheck.includes(val)) {
+        } else if (descriptioncheck.includes(val)) {
           var text1 = document.createTextNode(paversJSON[x].DonorName);
           var text2 = document.createTextNode(paversJSON[x].Personalization);
           var text3 = document.createTextNode(paversJSON[x].Zone);
@@ -107,8 +103,7 @@ function populateResults() {
                 printmap();
                 dpcounter++;
 
-              }
-              else if (descriptioncheck.includes(searchword[i]) && bricksJSON[x].Personalization != word1) {
+              } else if (descriptioncheck.includes(searchword[i]) && bricksJSON[x].Personalization != word1) {
                 word1 = bricksJSON[x].Personalization;
                 var text1 = document.createTextNode(bricksJSON[x].DonorName);
                 var text2 = document.createTextNode(bricksJSON[x].Personalization);
@@ -142,8 +137,7 @@ function populateResults() {
                 printmap();
                 ppcounter++;
 
-              }
-              else if (descriptioncheck.includes(searchword[i]) && paversJSON[x].Personalization != word1) {
+              } else if (descriptioncheck.includes(searchword[i]) && paversJSON[x].Personalization != word1) {
                 word1 = paversJSON[x].Personalization;
                 var text1 = document.createTextNode(paversJSON[x].DonorName);
                 var text2 = document.createTextNode(paversJSON[x].Personalization);
@@ -189,6 +183,7 @@ function populateResults() {
     }
   }
 }
+
 function displayAllDonors() {
   console.log("new js file");
   var x = document.getElementById("results");
@@ -279,6 +274,7 @@ function displayAllDonors() {
     x.appendChild(count);
     document.getElementById("results").appendChild(x);
   }
+
   function printmap() {
 
     var tr = document.createElement('tr');
@@ -298,9 +294,6 @@ function displayAllDonors() {
     var w = text3.textContent.replace(" ", "") + "," + text2.textContent.replace(/\n|\r/g, "").replace(/\"/g, " ");
     tr.setAttribute("onclick", 'showImage(\"' + w + '")');
   }
-
-
-
 
 }
 
