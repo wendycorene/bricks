@@ -131,6 +131,25 @@ b {
   color: white;
 }
 
+/* button to navigate to payment page*/
+.button {
+  background-color: rgb(115, 168, 97);
+  /* Green */
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin: 2px 1px;
+  cursor: pointer;
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+  top: 80;
+}
+
 /* styling the search, donor list and reset button*/
 .btn {
   background-color: rgb(115, 168, 97);
@@ -150,12 +169,10 @@ b {
 /* styling the print button*/
 #print {
   background-color: rgb(115, 168, 97);
+  /* Green */
   border: none;
-  position: absolute;
-  right: 0;
-  top: 80;
   color: white;
-  padding: 4px 13px;
+  padding: 10px 25px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

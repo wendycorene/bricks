@@ -50,7 +50,7 @@ function populateResults() {
           var text1 = document.createTextNode(bricksJSON[x].DonorName);
           var text2 = document.createTextNode(bricksJSON[x].Personalization);
           var text3 = document.createTextNode(bricksJSON[x].Zone);
-          
+
           console.log("in bricks don");
           printmap();
           counter++;
@@ -171,8 +171,8 @@ function populateResults() {
         var td2 = document.createElement('td');
         var td3 = document.createElement('td');
         var td4 = document.createElement('td');
-        var td5=document.createElement('td');
-        var text4=document.createTextNode("👁");
+        var td5 = document.createElement('td');
+        var text4 = document.createTextNode("👁");
         td2.appendChild(text1);
         td3.appendChild(text2);
         td4.appendChild(text3);
@@ -290,7 +290,7 @@ function populateResults() {
 //     var td3 = document.createElement('td');
 //     var td4 = document.createElement('td');
 //     var td5 = document.createElement('td');
-  
+
 //     td2.appendChild(text1);
 //     td3.appendChild(text2);
 //     td4.appendChild(text3);
@@ -311,4 +311,3 @@ function populateResults() {
 
 
 // }
-
