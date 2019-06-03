@@ -1,5 +1,6 @@
 // Method help in searching the json data for desirble results
 // designed by Priyanka Bonam
+// Function to populate results when user clicks on the search result in a table
 function populateResults() {
   var x = document.getElementById("results");
   if (x.style.display == "none") {
@@ -17,7 +18,7 @@ function populateResults() {
 
   }
   if (res != 0) {
-
+    // if condition to check if the result is in the excel sheet and to print it in the table
     if (val != "" && lengt > 1) {
       var counter = 1;
       var pcounter = 1;
@@ -124,6 +125,7 @@ function populateResults() {
 
         }
       }
+      // if condition to check if the result is in the excel sheet and to print it in the table for the pavers
       for (var x in paversJSON) {
         var toCheck = paversJSON[x].DonorName.toLowerCase();
         var descriptioncheck = paversJSON[x].Personalization.toLowerCase();
@@ -164,7 +166,7 @@ function populateResults() {
         x.appendChild(count);
         document.getElementById("results").appendChild(x);
       }
-
+      //Function to print the map with respect to their zone numbers
       function printmap() {
 
         var tr = document.createElement('tr');
