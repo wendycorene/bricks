@@ -12,7 +12,7 @@ function populateResults() {
   var lengt = val.length;
   if (lengt <= 1) {
     var y = document.createElement("H1");
-    var count = document.createTextNode("Please enter atleast 2 characters to search");
+    var count = document.createTextNode("Please enter at least 2 characters to search");
     y.appendChild(count);
     document.getElementById("results").appendChild(y);
 
@@ -162,7 +162,7 @@ function populateResults() {
 
       var x = document.createElement("H1");
       if (totaldonorcount === 1 && totalpavercount === 1) {
-        var count = document.createTextNode("no results found for  " + val + ". Please check your search terms and try again. ");
+        var count = document.createTextNode("No results found for  " + val + ". Please check your search terms and try again. ");
         x.appendChild(count);
         document.getElementById("results").appendChild(x);
       }
