@@ -41,7 +41,10 @@ function showImage() {
       document.getElementById("brick").innerHTML = "\n";
       document.getElementById("brick").innerHTML = paversJSON[x].Line1.toString().toUpperCase()+ "<br />";
       console.log(paversJSON[x].Line1);
-      document.getElementById("brick").innerHTML += paversJSON[x].Line2.toString().toUpperCase() + "<br />";
+      if (typeof paversJSON[x].Line3 !== "undefined") {
+        document.getElementById("brick").innerHTML += paversJSON[x].Line2.toString().toUpperCase() + "<br />";
+      }
+      
 
       if (typeof paversJSON[x].Line3 !== "undefined") {
         document.getElementById("brick").innerHTML += paversJSON[x].Line3.toString().toUpperCase()+ "<br />";
