@@ -51,7 +51,6 @@ function populateResults() {
           var text1 = document.createTextNode(bricksJSON[x].DonorName);
           var text2 = document.createTextNode(bricksJSON[x].Personalization);
           var text3 = document.createTextNode(bricksJSON[x].Zone);
-
           console.log("in bricks don");
           printmap();
           counter++;
@@ -62,7 +61,6 @@ function populateResults() {
           console.log("in bricks person");
           printmap();
           counter++;
-
         }
         var donorcount = counter;
       }
@@ -100,7 +98,6 @@ function populateResults() {
           for (i = 0; i < searchword.length; i++) {
             if (!searchword[i].includes("&") && searchword[i].trim() != "") {
               if (toCheck.includes(searchword[i].trim()) && bricksJSON[x].Personalization != word1) {
-
                 word1 = bricksJSON[x].Personalization;
                 var text1 = document.createTextNode(bricksJSON[x].DonorName);
                 var text2 = document.createTextNode(bricksJSON[x].Personalization);

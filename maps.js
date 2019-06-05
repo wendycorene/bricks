@@ -12,13 +12,11 @@ function showImage() {
   var imgSource = document.getElementById("outputImage");
   imgSource.setAttribute("width", 1000, "margin-left", 1000, "border-width", 100);
   imgSource.setAttribute("src", "img/Maps/" + str);
-
   // storing the the personalization in variable "p" when donor clicks on the result
   var p = event.target.parentElement.childNodes[1].innerHTML;
   var nameOnBrick = event.target.parentElement.childNodes[1].innerText.split("<td>").join("").split("\n").join("<br>");
   document.getElementById("brick").innerHTML = nameOnBrick;
   document.getElementById("brick").style.display = "block";
-
   //for loop to check if the results are present in "x"
   //if condition checks the variable "p" when donor clicks on a result 
   //and calls the inscription line by line & prints the inscription on the brick if the result is present in the bricksJSON 
