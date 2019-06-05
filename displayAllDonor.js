@@ -40,29 +40,7 @@ function displayAllDonors() {
       var text3 = document.createTextNode(paversJSON[x].Zone);
       displayTable();
     }
-  
-  
-    // for (var x in bricksJSON) {
-    //   var toCheck = bricksJSON[x].DonorName.toLowerCase();
-    //   var descriptioncheck = bricksJSON[x].Personalization.toLowerCase();
-    //     var word1 = "null";
-    //     word1 = bricksJSON[x].Personalization;
-    //     var text1 = document.createTextNode(bricksJSON[x].DonorName);
-    //     var text2 = document.createTextNode(bricksJSON[x].Personalization);
-    //     var text3 = document.createTextNode(bricksJSON[x].Zone); 
-    //     displayTable();
-    // }
-    // for (var x in paversJSON) {
-    //   var toCheck = paversJSON[x].DonorName.toLowerCase();
-    //   var descriptioncheck = paversJSON[x].Personalization.toLowerCase();
-    //     var word1 = "null";
-    //     word1 = paversJSON[x].Personalization;
-    //     var text1 = document.createTextNode(paversJSON[x].DonorName);
-    //     var text2 = document.createTextNode(paversJSON[x].Personalization);
-    //     var text3 = document.createTextNode(paversJSON[x].Zone);
-    //     displayTable();
-    
-    // }
+
     var x = document.createElement("H2");
     function displayTable() {
       var tr = document.createElement('tr');
